@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 8054db36-b3de-4031-9c40-91f10ea9aacd
   title: Entry
-  position: {x: 250, y: 0}
+  position: {x: 371.9501, y: 168}
   transitions:
   - rootStateID: 8054db36-b3de-4031-9c40-91f10ea9aacd
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -34,7 +34,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
   title: Locomotion State
-  position: {x: 583, y: 76}
+  position: {x: 358, y: 57.5}
   transitions:
   - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
     trueStateID: 9f634198-6c68-4a27-b854-649f63279193
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 9f634198-6c68-4a27-b854-649f63279193
   title: Jump State
-  position: {x: 591, y: -20}
+  position: {x: 350.00006, y: -50.98014}
   transitions:
   - rootStateID: 9f634198-6c68-4a27-b854-649f63279193
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -77,7 +77,7 @@ MonoBehaviour:
           parameters:
           - Space
           negate: 1
-        - predicate: Max Vertical Velocity Reached
+        - predicate: Max Jump Velocity Reached
           parameters: []
           negate: 0
   onEnterActions: []
@@ -118,5 +118,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: bcd51f00-2dd7-4911-b1b0-b23a7f0bf0a3
   title: Any
-  position: {x: 250, y: 50}
+  position: {x: 101.60004, y: 77.550026}
   transitions: []
