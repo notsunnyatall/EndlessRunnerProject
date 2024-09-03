@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6302393227048516554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248a74bd55c629a458261d2d8fe3a225, type: 3}
+  m_Name: EntryState
+  m_EditorClassIdentifier: 
+  uniqueID: 8054db36-b3de-4031-9c40-91f10ea9aacd
+  title: Entry
+  position: {x: 250, y: 0}
+  transitions:
+  - rootStateID: 8054db36-b3de-4031-9c40-91f10ea9aacd
+    trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
+    condition:
+      and: []
+--- !u!114 &-1740323444286328881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c41c226ac830cc4badff91167841243, type: 3}
+  m_Name: ActionState
+  m_EditorClassIdentifier: 
+  uniqueID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
+  title: Locomotion State
+  position: {x: 583, y: 76}
+  transitions:
+  - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
+    trueStateID: 9f634198-6c68-4a27-b854-649f63279193
+    condition:
+      and:
+      - or:
+        - predicate: Key Pressed
+          parameters:
+          - Space
+          negate: 0
+      - or:
+        - predicate: Is Grounded
+          parameters: []
+          negate: 0
+  onEnterActions: []
+  onTickActions: []
+  onExitActions: []
+--- !u!114 &-627141906754884099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c41c226ac830cc4badff91167841243, type: 3}
+  m_Name: ActionState
+  m_EditorClassIdentifier: 
+  uniqueID: 9f634198-6c68-4a27-b854-649f63279193
+  title: Jump State
+  position: {x: 591, y: -20}
+  transitions:
+  - rootStateID: 9f634198-6c68-4a27-b854-649f63279193
+    trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
+    condition:
+      and:
+      - or:
+        - predicate: Key Pressed
+          parameters:
+          - Space
+          negate: 1
+        - predicate: Max Vertical Velocity Reached
+          parameters: []
+          negate: 0
+  onEnterActions: []
+  onTickActions:
+  - actionID: Jump
+    parameters: []
+  onExitActions: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aedaed16a35737344b2389cf12928266, type: 3}
+  m_Name: Player State Machine
+  m_EditorClassIdentifier: 
+  entryState: {fileID: -6302393227048516554}
+  anyState: {fileID: 7325111460197815310}
+  states:
+  - {fileID: -6302393227048516554}
+  - {fileID: 7325111460197815310}
+  - {fileID: -1740323444286328881}
+  - {fileID: -627141906754884099}
+--- !u!114 &7325111460197815310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ddedce7bbba8c408e2c6e1570cd3d5, type: 3}
+  m_Name: AnyState
+  m_EditorClassIdentifier: 
+  uniqueID: bcd51f00-2dd7-4911-b1b0-b23a7f0bf0a3
+  title: Any
+  position: {x: 250, y: 50}
+  transitions: []
