@@ -7,7 +7,12 @@ namespace EndlessRunner.UI
     public class HealthPointsUI : MonoBehaviour
     {
         [SerializeField] Health health;
-        [SerializeField] TMP_Text healthPointsText;
+        TMP_Text healthPointsText;
+
+        void Awake()
+        {
+            healthPointsText = GetComponent<TMP_Text>();
+        }
 
         void Update()
         {
