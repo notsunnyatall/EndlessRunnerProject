@@ -41,9 +41,9 @@ MonoBehaviour:
     condition:
       and:
       - or:
-        - predicate: Key Pressed
+        - predicate: Input Action Pressed
           parameters:
-          - Space
+          - Jump
           negate: 0
       - or:
         - predicate: Is Grounded
@@ -66,17 +66,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 9f634198-6c68-4a27-b854-649f63279193
   title: Jump State
-  position: {x: 350.00006, y: -50.98014}
+  position: {x: 350, y: -42}
   transitions:
   - rootStateID: 9f634198-6c68-4a27-b854-649f63279193
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
     condition:
       and:
       - or:
-        - predicate: Key Pressed
+        - predicate: Input Action Released
           parameters:
-          - Space
-          negate: 1
+          - Jump
+          negate: 0
         - predicate: Max Jump Velocity Reached
           parameters: []
           negate: 0

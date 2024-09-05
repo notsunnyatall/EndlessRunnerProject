@@ -15,26 +15,14 @@ PrefabInstance:
     - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-    - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
     - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6470861768112260203, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: initialHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6470861768112260203, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
@@ -153,6 +141,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 8041726403148149173}
+    - targetCorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4970527418725496204}
     - targetCorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
@@ -170,6 +161,40 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
   m_PrefabInstance: {fileID: 8559359419949525752}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8041726403148149173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213695205824315632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c35caed9732ce0944b5b60c225565ddc, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 257638b6-6c94-48fa-afd1-3a9b699920d1
+    m_ActionName: Player/Jump[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &4970527418725496204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,9 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1f9e17de724447a887ac4d7471e94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 0.5
-  maxJumpVelocity: 12
-  gravityMultiplier: 2
+  jumpForce: 0.1
+  maxJumpVelocity: 15
+  gravityMultiplier: 3
 --- !u!114 &3596059462745750975
 MonoBehaviour:
   m_ObjectHideFlags: 0

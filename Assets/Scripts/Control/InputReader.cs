@@ -1,18 +1,32 @@
-using System;
 using RainbowAssets.Utils;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace EndlessRunner.Control
 {
     public class InputReader : MonoBehaviour, IPredicateEvaluator
     {
+        PlayerInput playerInput;
+
+        void Awake()
+        {
+            playerInput = GetComponent<PlayerInput>();
+        }
+
+        InputAction GetInputAction(string actionName)
+        {
+            return playerInput.actions[actionName];
+        } 
+
         bool? IPredicateEvaluator.Evaluate(string predicate, string[] parameters)
         {
             switch(predicate)
             {
-                case "Key Pressed":
-                    KeyCode keyCode = Enum.Parse<KeyCode>(parameters[0]);
-                    return Input.GetKey(keyCode);
+                case "Input Action Pressed":
+                    return GetInputAction(parameters[0]).WasPressedThisFrame();
+                
+                case "Input Action Released":
+                    return GetInputAction(parameters[0]).WasReleasedThisFrame();
             }
 
             return null;
