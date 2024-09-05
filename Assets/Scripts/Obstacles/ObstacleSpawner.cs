@@ -1,20 +1,19 @@
 using UnityEngine;
-using UnityEngine.Pool;
 
 namespace EndlessRunner.Obstacles
 {
-    public class ObstacleSpawner : MonoBehaviour
+    public class ObjectSpawner : MonoBehaviour
     {
-        [SerializeField] ObstacleConfig[] obstaclesConfig;
+        [SerializeField] SpawnData[] obstaclesConfig;
         [SerializeField] float minSpawnDelay = 1;
         [SerializeField] float maxSpawnDelay = 4;
         float timeSinceSpawned = Mathf.Infinity;
         float spawnDelay = 0;
 
         [System.Serializable]
-        struct ObstacleConfig
+        struct SpawnData
         {
-            public Obstacle obstacle;
+            public GameObject objectToSpawn;
             public Vector3 offset;
         }
 
@@ -32,9 +31,9 @@ namespace EndlessRunner.Obstacles
 
                 Vector3 offset = obstaclesConfig[randomIndex].offset;
 
-                Obstacle obstacle = obstaclesConfig[randomIndex].obstacle;
+                GameObject objectToSpawn = obstaclesConfig[randomIndex].objectToSpawn;
 
-                Instantiate(obstacle, transform.position + offset, Quaternion.identity);
+                Instantiate(objectToSpawn, transform.position + offset, Quaternion.identity);
             }
         }
     }
