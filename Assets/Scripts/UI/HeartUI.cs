@@ -4,16 +4,16 @@ namespace EndlessRunner.UI
 {
     public class HeartUI : MonoBehaviour
     {
-        [SerializeField] GameObject foreGround;
+        [SerializeField] GameObject foreground;
 
         public void Fill()
         {
-            foreGround.SetActive(true);
+            foreground.SetActive(true);
         }
 
         public void Empty()
         {
-            foreGround.SetActive(false);
+            foreground.SetActive(false);
         }
     }
 }

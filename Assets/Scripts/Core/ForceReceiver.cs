@@ -6,10 +6,11 @@ namespace EndlessRunner.Core
     public class ForceReceiver : MonoBehaviour, IPredicateEvaluator, IAction
     {
         [SerializeField] float jumpForce = 2;
-        [SerializeField] float maxJumpVelocity = 10;
+        [SerializeField] float maxJumpHeight = 10;
         [SerializeField] float gravityMultiplier = 2;
         CharacterController controller;
         float verticalVelocity = 0;
+        float initialJumpHeight = 0;
         
         void Awake()
         {
@@ -37,16 +38,21 @@ namespace EndlessRunner.Core
             controller.Move(Vector2.up * verticalVelocity * Time.deltaTime);
         }
 
-        bool MaxJumpVelocityReached()
+        bool MaxJumpHeightReached()
         {
-            return verticalVelocity >= maxJumpVelocity;
+            return transform.position.y >= initialJumpHeight + maxJumpHeight;
         }
 
         void Jump()
         {
-            if(!MaxJumpVelocityReached())
+            if(!MaxJumpHeightReached())
             {
                 verticalVelocity += jumpForce;
+
+                if(controller.isGrounded)
+                {
+                    initialJumpHeight = transform.position.y;
+                }
             }
         }
 
@@ -67,8 +73,8 @@ namespace EndlessRunner.Core
                 case "Is Grounded":
                     return controller.isGrounded;
 
-                case "Max Jump Velocity Reached":
-                    return MaxJumpVelocityReached();
+                case "Max Jump Height Reached":
+                    return MaxJumpHeightReached();
             }
 
             return null;

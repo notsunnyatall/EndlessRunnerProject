@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EndlessRunner.Core
 {
-    public class AnimationPlayer : MonoBehaviour, IAction, IPredicateEvaluator
+    public class AnimationPlayer : MonoBehaviour, IAction
     {
         [SerializeField] float transitionTime = 0.1f;
         Animator animator;
@@ -11,18 +11,6 @@ namespace EndlessRunner.Core
         void Awake()
         {
             animator = GetComponent<Animator>();
-        }
-
-        float GetAnimationTime(string tag)
-        {
-            var current = animator.GetCurrentAnimatorStateInfo(0);
-
-            if(current.IsTag(tag) && !animator.IsInTransition(0))
-            {
-                return current.normalizedTime;
-            }
-
-            return 0;
         }
 
         void IAction.DoAction(string actionID, string[] parameters)
@@ -33,17 +21,6 @@ namespace EndlessRunner.Core
                     animator.CrossFadeInFixedTime(parameters[0], transitionTime);
                     break;
             }
-        }
-
-        bool? IPredicateEvaluator.Evaluate(string predicate, string[] parameters)
-        {
-            switch(predicate)
-            {
-                case "Animation Over":
-                    return GetAnimationTime(parameters[0]) >= 1;
-            }
-
-            return null;
         }
     }
 }
