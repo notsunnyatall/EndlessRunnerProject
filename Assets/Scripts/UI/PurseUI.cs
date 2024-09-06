@@ -6,17 +6,32 @@ namespace EndlessRunner.UI
 {
     public class PurseUI : MonoBehaviour
     {
-        [SerializeField] Purse purse;
-        TMP_Text balanceText;
+        [SerializeField] TMP_Text balanceText;
+        Purse playerPurse;
+
+        void OnEnable()
+        {
+            playerPurse.purseUpdated.AddListener(Refresh);
+        }
+
+        void OnDisable()
+        {
+            playerPurse.purseUpdated.AddListener(Refresh);
+        }
 
         void Awake()
         {
-            balanceText = GetComponent<TMP_Text>();
+            playerPurse = GameObject.FindWithTag("Player").GetComponent<Purse>();
         }
 
-        void Update()
+        void Start()
         {
-            balanceText.text = $"Coins:{purse.GetBalance()}";
+            Refresh();
+        }
+
+        void Refresh()
+        {
+            balanceText.text = $"${playerPurse.GetBalance()}";
         }
     }
 }

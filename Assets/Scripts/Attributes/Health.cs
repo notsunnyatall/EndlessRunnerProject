@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,24 +5,29 @@ namespace EndlessRunner.Attributes
 {
     public class Health : MonoBehaviour
     {
-        [SerializeField] int initialHealthPoints = 2;
-        [SerializeField] UnityEvent onDamageTaken;
-        [SerializeField] UnityEvent onDie;
+        [SerializeField] int maxHealthPoints = 2;
+        public UnityEvent onDie;
+        public UnityEvent onDamageTaken;
         bool isDead = false;
-        int healthPoints = 0;
+        int currentHealthPoints = 0;
 
-        public int GetHealthPoints()
+        public int GetMaxHealthPoints()
         {
-            return healthPoints;
+            return maxHealthPoints;
+        }
+
+        public int GetCurrentHealthPoints()
+        {
+            return currentHealthPoints;
         }
 
         public void TakeDamage(int damagePoints)
         {
             if(!isDead)
             {
-                healthPoints = Mathf.Max(0, healthPoints - damagePoints);
+                currentHealthPoints = Mathf.Max(0, currentHealthPoints - damagePoints);
 
-                if(healthPoints <= 0)
+                if(currentHealthPoints <= 0)
                 {
                     isDead = true;
                     onDie?.Invoke();
@@ -37,7 +41,7 @@ namespace EndlessRunner.Attributes
 
         void Awake()
         {
-            healthPoints = initialHealthPoints;
+            currentHealthPoints = maxHealthPoints;
         }
     }
 }

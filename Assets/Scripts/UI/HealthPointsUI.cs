@@ -1,22 +1,64 @@
 using EndlessRunner.Attributes;
-using TMPro;
 using UnityEngine;
 
 namespace EndlessRunner.UI
 {
     public class HealthPointsUI : MonoBehaviour
     {
-        [SerializeField] Health health;
-        TMP_Text healthPointsText;
+        [SerializeField] HeartUI heartPrefab;
+        [SerializeField] Transform heartContainer;
+        Health playerHealth;
+
+        void OnEnable()
+        {
+            playerHealth.onDamageTaken.AddListener(Refresh);
+            playerHealth.onDie.AddListener(Refresh);
+        }
+
+        void OnDisable()
+        {
+            playerHealth.onDamageTaken.RemoveListener(Refresh);
+            playerHealth.onDie.AddListener(Refresh);
+        }
 
         void Awake()
         {
-            healthPointsText = GetComponent<TMP_Text>();
+            playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
         }
 
-        void Update()
+        void Start()
         {
-            healthPointsText.text = $"HP:{health.GetHealthPoints()}";
+            DrawHearts();
+        }
+
+        void DrawHearts()
+        {
+            foreach(Transform heart in heartContainer)
+            {
+                Destroy(heart.gameObject);
+            }
+
+            for(int i = 0; i < playerHealth.GetMaxHealthPoints(); i++)
+            {
+                Instantiate(heartPrefab, heartContainer);
+            }
+        }
+
+        void Refresh()
+        {
+            for(int i = 0; i < playerHealth.GetMaxHealthPoints(); i++)
+            {
+                HeartUI currentHeart = heartContainer.GetChild(i).GetComponent<HeartUI>();
+
+                if(i < playerHealth.GetCurrentHealthPoints())
+                {
+                    currentHeart.Fill();
+                }
+                else
+                {
+                    currentHeart.Empty();
+                }
+            }
         }
     }
 }

@@ -17,6 +17,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4944230376442633554, guid: b41abf840d9ea3741a347d9f69137138, type: 3}
     - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -268,3 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialBalance: 0
+  purseUpdated:
+    m_PersistentCalls:
+      m_Calls: []
