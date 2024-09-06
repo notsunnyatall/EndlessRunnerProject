@@ -15,10 +15,14 @@ PrefabInstance:
     - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
+      objectReference: {fileID: 4944230376442633554, guid: b41abf840d9ea3741a347d9f69137138, type: 3}
     - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780669997960815054, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      propertyPath: m_Center.y
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6470861768112260203, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: initialHealthPoints

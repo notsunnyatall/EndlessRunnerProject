@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6119001590488487, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_Name
-      value: Base Obstacle
+      value: Grounded Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5366569455919718461, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 5366569455919718461, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696274576009103547, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

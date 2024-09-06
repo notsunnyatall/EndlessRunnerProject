@@ -510,7 +510,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3388372084844457619, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
   m_PrefabInstance: {fileID: 1933913853}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2089605620}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b3daf58d2c849b292ab1e5a56b7457, type: 3}
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 40952391749411096, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
   m_PrefabInstance: {fileID: 1933913853}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2089605620}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad65ba5f21ed444cd8d3f91fadbd59b5, type: 3}
@@ -549,7 +549,7 @@ PrefabInstance:
       objectReference: {fileID: 5188891938248762281, guid: cf395368bf1ef43cf9c4b1333fb9b380, type: 3}
     - target: {fileID: 1124781552475278401, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: obstaclesConfig.Array.data[1].offset.x
-      value: -5
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 1124781552475278401, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: obstaclesConfig.Array.data[1].offset.y
@@ -561,7 +561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1124781552475278401, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: obstaclesConfig.Array.data[2].offset.y
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1124781552475278401, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: obstaclesConfig.Array.data[1].heightOffset
@@ -650,7 +650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3209272575047698970, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.9534163
       objectReference: {fileID: 0}
     - target: {fileID: 3209272575047698970, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: m_LocalScale.z
@@ -658,11 +658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3209272575047698970, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8.12
       objectReference: {fileID: 0}
     - target: {fileID: 3209272575047698970, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0400085
+      value: -2.58
       objectReference: {fileID: 0}
     - target: {fileID: 3209272575047698970, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: m_LocalPosition.z
@@ -737,14 +737,51 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4334815632398703500, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
+      propertyPath: jumpForce
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334815632398703500, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
+      propertyPath: maxJumpVelocity
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334815632398703500, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: maxVerticalVelocity
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2213695205824315632, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 2089605628}
   m_SourcePrefab: {fileID: 100100000, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
+--- !u!1 &2089605620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213695205824315632, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
+  m_PrefabInstance: {fileID: 1933913853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2089605628
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089605620}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b985314b3af5174cb7b8a6e3f4654b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2948311713255744597
 PrefabInstance:
   m_ObjectHideFlags: 0
