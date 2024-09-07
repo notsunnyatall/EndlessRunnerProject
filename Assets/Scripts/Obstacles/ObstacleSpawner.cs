@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace EndlessRunner.Obstacles
@@ -14,6 +15,8 @@ namespace EndlessRunner.Obstacles
         struct SpawnData
         {
             public GameObject objectToSpawn;
+            [Min(1)] public int number;
+            public float delay;
             public Vector3 offset;
         }
 
@@ -29,11 +32,20 @@ namespace EndlessRunner.Obstacles
 
                 int randomIndex = Random.Range(0, obstaclesConfig.Length);
 
-                Vector3 offset = obstaclesConfig[randomIndex].offset;
+                StartCoroutine(SpawnRoutine(obstaclesConfig[randomIndex]));
+            }
+        }
 
-                GameObject objectToSpawn = obstaclesConfig[randomIndex].objectToSpawn;
+        IEnumerator SpawnRoutine(SpawnData spawnData)
+        {
+            for(int i = 0; i < spawnData.number; i++)
+            {
+                Vector3 offset = spawnData.offset;
+                GameObject objectToSpawn = spawnData.objectToSpawn;
 
                 Instantiate(objectToSpawn, transform.position + offset, Quaternion.identity);
+                
+                yield return new WaitForSeconds(spawnData.delay);
             }
         }
     }

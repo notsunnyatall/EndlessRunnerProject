@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclesConfig: []
   minSpawnDelay: 1
-  maxSpawnDelay: 4
+  maxSpawnDelay: 3
