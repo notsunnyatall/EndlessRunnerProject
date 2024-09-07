@@ -9,13 +9,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      propertyPath: m_Size.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_Size.y
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4944230376442633554, guid: b41abf840d9ea3741a347d9f69137138, type: 3}
+      objectReference: {fileID: 4944230376442633554, guid: bca3acae67f183349a5e5b0058c66841, type: 3}
     - target: {fileID: 2988739804409627267, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_SpriteSortPoint
       value: 1
@@ -26,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3780669997960815054, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_Center.y
-      value: -0.6
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6470861768112260203, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: initialHealthPoints
@@ -231,9 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1f9e17de724447a887ac4d7471e94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 0.2
-  jumpTime: 1
-  gravityMultiplier: 3
+  jumpForce: 0.1
+  jumpTime: 0.15
+  gravityMultiplier: 2
 --- !u!114 &3596059462745750975
 MonoBehaviour:
   m_ObjectHideFlags: 0

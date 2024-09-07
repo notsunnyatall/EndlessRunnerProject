@@ -47,18 +47,17 @@ namespace EndlessRunner.Core
 
         void Jump()
         {
-            if(controller.isGrounded)
-            {
-                timeSinceJumped = 0;
-            }
-
-            verticalVelocity += jumpForce;
+            verticalVelocity = jumpForce;
         }
 
         void IAction.DoAction(string actionID, string[] parameters)
         {
             switch(actionID)
             {
+                case "Start Jump":
+                    timeSinceJumped = 0;
+                    break;
+
                 case "Jump":
                     Jump();
                     break;

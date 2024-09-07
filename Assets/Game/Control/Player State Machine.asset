@@ -117,6 +117,8 @@ MonoBehaviour:
   - actionID: Play Animation
     parameters:
     - Jump
+  - actionID: Start Jump
+    parameters: []
   onTickActions:
   - actionID: Jump
     parameters: []
