@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 0.2
-  maxJumpHeight: 1.5
+  jumpTime: 1
   gravityMultiplier: 3
 --- !u!114 &3596059462745750975
 MonoBehaviour:

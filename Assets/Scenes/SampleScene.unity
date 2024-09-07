@@ -711,8 +711,16 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4334815632398703500, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
+      propertyPath: jumpTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334815632398703500, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: jumpForce
-      value: 0.2
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334815632398703500, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
+      propertyPath: maxJumpHeight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4334815632398703500, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: maxJumpVelocity

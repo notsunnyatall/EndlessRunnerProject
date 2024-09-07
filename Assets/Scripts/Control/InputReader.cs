@@ -27,6 +27,9 @@ namespace EndlessRunner.Control
                 
                 case "Input Action Released":
                     return GetInputAction(parameters[0]).WasReleasedThisFrame();
+                
+                case "Input Action Hold":
+                    return GetInputAction(parameters[0]).IsPressed();
             }
 
             return null;

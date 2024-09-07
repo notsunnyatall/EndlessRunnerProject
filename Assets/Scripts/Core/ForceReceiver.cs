@@ -5,13 +5,13 @@ namespace EndlessRunner.Core
 {
     public class ForceReceiver : MonoBehaviour, IPredicateEvaluator, IAction
     {
-        [SerializeField] float jumpForce = 2;
-        [SerializeField] float maxJumpHeight = 10;
-        [SerializeField] float gravityMultiplier = 2;
+        [SerializeField] float jumpForce = 0.15f;
+        [SerializeField] float jumpTime = 0.15f;
+        [SerializeField] float gravityMultiplier = 3;
         CharacterController controller;
         float verticalVelocity = 0;
-        float initialJumpHeight = 0;
-        
+        float timeSinceJumped = Mathf.Infinity;
+
         void Awake()
         {
             controller = GetComponent<CharacterController>();
@@ -19,6 +19,8 @@ namespace EndlessRunner.Core
 
         void Update()
         {
+            timeSinceJumped += Time.deltaTime;
+
             ApplyGravity();
         }
 
@@ -38,22 +40,19 @@ namespace EndlessRunner.Core
             controller.Move(Vector2.up * verticalVelocity * Time.deltaTime);
         }
 
-        bool MaxJumpHeightReached()
+        bool JumpTimeFinished()
         {
-            return transform.position.y >= initialJumpHeight + maxJumpHeight;
+            return jumpTime < timeSinceJumped;
         }
 
         void Jump()
         {
-            if(!MaxJumpHeightReached())
+            if(controller.isGrounded)
             {
-                verticalVelocity += jumpForce;
-
-                if(controller.isGrounded)
-                {
-                    initialJumpHeight = transform.position.y;
-                }
+                timeSinceJumped = 0;
             }
+
+            verticalVelocity += jumpForce;
         }
 
         void IAction.DoAction(string actionID, string[] parameters)
@@ -73,8 +72,8 @@ namespace EndlessRunner.Core
                 case "Is Grounded":
                     return controller.isGrounded;
 
-                case "Max Jump Height Reached":
-                    return MaxJumpHeightReached();
+                case "Jump Time Finished":
+                    return JumpTimeFinished();
             }
 
             return null;
