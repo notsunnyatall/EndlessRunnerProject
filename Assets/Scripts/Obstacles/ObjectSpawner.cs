@@ -44,7 +44,7 @@ namespace EndlessRunner.Obstacles
                 GameObject objectToSpawn = spawnData.objectToSpawn;
 
                 Instantiate(objectToSpawn, transform.position + offset, Quaternion.identity);
-                
+
                 yield return new WaitForSeconds(spawnData.delay);
             }
         }

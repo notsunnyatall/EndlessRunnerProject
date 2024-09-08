@@ -1,4 +1,5 @@
 using EndlessRunner.Attributes;
+using EndlessRunner.Core;
 using EndlessRunner.Inventories;
 using UnityEngine;
 
@@ -8,9 +9,9 @@ namespace EndlessRunner.Obstacles
     {
         [SerializeField] TriggerEffect effect;
         [SerializeField] int effectPoints = 1;
-        [SerializeField] float speed = 5;
         [SerializeField] Vector2 moveDirection = Vector2.left;
         [SerializeField] bool destroyAfterHit = false;
+        GameSettings gameSettings;
 
         enum TriggerEffect
         {
@@ -18,9 +19,14 @@ namespace EndlessRunner.Obstacles
             Currency
         }
 
+        void Awake()
+        {
+            gameSettings = FindObjectOfType<GameSettings>();
+        }
+
         void Update()
         {
-            transform.Translate(moveDirection * speed * Time.deltaTime);
+            transform.Translate(moveDirection * gameSettings.GetGameSpeed() * Time.deltaTime);
         }
 
         void OnBecameInvisible()
