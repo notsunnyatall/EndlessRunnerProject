@@ -236,8 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 0.1
-  jumpTime: 0.15
-  gravityMultiplier: 2
+  jumpTime: 0.05
+  gravityMultiplier: 3.2
 --- !u!114 &3596059462745750975
 MonoBehaviour:
   m_ObjectHideFlags: 0
