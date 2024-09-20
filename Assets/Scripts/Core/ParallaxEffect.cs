@@ -25,9 +25,9 @@ namespace EndlessRunner.Core
 
             foreach(var item in parallaxItems)
             {
-                Material material = item.renderer.material;
-                float totalSpeed = item.speedMultiplier * speed;
-                material.mainTextureOffset += Vector2.right * totalSpeed * Time.deltaTime;
+                MeshRenderer renderer = item.renderer;
+                float totalSpeed = item.speedMultiplier * speed / renderer.transform.localScale.x;
+                renderer.material.mainTextureOffset += Vector2.right * totalSpeed * Time.deltaTime;
             }
         }
     }
