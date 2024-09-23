@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 9f634198-6c68-4a27-b854-649f63279193
   title: Jump State
-  position: {x: 374, y: -32}
+  position: {x: 374.00006, y: -91.900024}
   transitions:
   - rootStateID: 9f634198-6c68-4a27-b854-649f63279193
     trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
