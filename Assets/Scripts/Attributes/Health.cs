@@ -8,6 +8,7 @@ namespace EndlessRunner.Attributes
         [SerializeField] int maxHealthPoints = 2;
         public UnityEvent onDie;
         public UnityEvent onDamageTaken;
+        public UnityEvent onHeal;
         int currentHealthPoints = 0;
 
         public int GetMaxHealthPoints()
@@ -34,6 +35,15 @@ namespace EndlessRunner.Attributes
                 {
                     onDamageTaken?.Invoke();
                 }
+            }
+        }
+
+        public void Heal(int healPoints)
+        {
+            if(!IsDead() && currentHealthPoints < maxHealthPoints)
+            {
+                currentHealthPoints = Mathf.Min(maxHealthPoints, currentHealthPoints + healPoints);
+                onHeal?.Invoke();
             }
         }
 

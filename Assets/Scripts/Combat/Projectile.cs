@@ -3,9 +3,9 @@ using EndlessRunner.Core;
 using EndlessRunner.Inventories;
 using UnityEngine;
 
-namespace EndlessRunner.Obstacles
+namespace EndlessRunner.Combat
 {
-    public class Obstacle : MonoBehaviour
+    public class Projectile : MonoBehaviour
     {
         [SerializeField] TriggerEffect effect;
         [SerializeField] int effectPoints = 1;

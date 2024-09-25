@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace EndlessRunner.Obstacles
+namespace EndlessRunner.Core
 {
     public class ObjectSpawner : MonoBehaviour
     {
@@ -15,7 +15,7 @@ namespace EndlessRunner.Obstacles
         struct SpawnData
         {
             public GameObject objectToSpawn;
-            [Min(1)] public int number;
+            [Min(1)] public int[] numbers;
             public float delay;
             public Vector3 offset;
         }
@@ -38,7 +38,9 @@ namespace EndlessRunner.Obstacles
 
         IEnumerator SpawnRoutine(SpawnData spawnData)
         {
-            for(int i = 0; i < spawnData.number; i++)
+            int randomSpawnNumber = Random.Range(0, spawnData.numbers.Length);
+
+            for(int i = 0; i < spawnData.numbers[randomSpawnNumber]; i++)
             {
                 Vector3 offset = spawnData.offset;
                 GameObject objectToSpawn = spawnData.objectToSpawn;

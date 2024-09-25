@@ -13,12 +13,14 @@ namespace EndlessRunner.UI
         {
             playerHealth.onDamageTaken.AddListener(Refresh);
             playerHealth.onDie.AddListener(Refresh);
+            playerHealth.onHeal.AddListener(Refresh);
         }
 
         void OnDisable()
         {
             playerHealth.onDamageTaken.RemoveListener(Refresh);
-            playerHealth.onDie.AddListener(Refresh);
+            playerHealth.onDie.RemoveListener(Refresh);
+            playerHealth.onHeal.RemoveListener(Refresh);
         }
 
         void Awake()
