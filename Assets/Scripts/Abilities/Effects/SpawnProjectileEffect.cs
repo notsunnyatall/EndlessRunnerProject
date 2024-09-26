@@ -9,9 +9,9 @@ namespace EndlessRunner.Abilities.Effects
     {
         [SerializeField] Projectile projectilePrefab;
 
-        public override void StartEffect(AbilityData abilityData, Action finished)
+        public override void StartEffect(AbilityData data, Action finished)
         {
-            GameObject user = abilityData.GetUser();
+            GameObject user = data.GetUser();
 
             Projectile projectileInstance = Instantiate(projectilePrefab, user.transform.position, Quaternion.identity);
 

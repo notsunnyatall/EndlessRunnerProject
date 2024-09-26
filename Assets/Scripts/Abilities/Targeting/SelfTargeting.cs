@@ -6,9 +6,9 @@ namespace EndlessRunner.Abilities.Targeting
     [CreateAssetMenu(menuName = "Abilities/Targeting/Self Targeting")]
     public class SelfTargeting : TargetingStrategy
     {
-        public override void StartTargeting(AbilityData abilityData, Action finished)
+        public override void StartTargeting(AbilityData data, Action finished)
         {
-            abilityData.SetTarget(abilityData.GetUser());
+            data.SetTarget(data.GetUser());
             finished();
         }
     }

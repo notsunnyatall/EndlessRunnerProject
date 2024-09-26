@@ -9,9 +9,9 @@ namespace EndlessRunner.Abilities.Effect
     {
         [SerializeField] int healthPoints;
 
-        public override void StartEffect(AbilityData abilityData, Action finished)
+        public override void StartEffect(AbilityData data, Action finished)
         {
-            if(abilityData.GetUser().TryGetComponent(out Health health))
+            if(data.GetUser().TryGetComponent(out Health health))
             {
                 if(healthPoints < 0)
                 {

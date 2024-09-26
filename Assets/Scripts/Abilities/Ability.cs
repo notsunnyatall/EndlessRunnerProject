@@ -1,4 +1,5 @@
 using System;
+using EndlessRunner.Core;
 using UnityEngine;
 
 namespace EndlessRunner.Abilities
@@ -8,21 +9,26 @@ namespace EndlessRunner.Abilities
     {
         [SerializeField] TargetingStrategy targeting;
         [SerializeField] EffectStrategy[] effects;
-        public Action abilityFinished;
+        [SerializeField] float cooldownTime = 5;
 
-        public void Use(GameObject user)
+        public void Use(GameObject user, CooldownStore cooldownStore, Action abilityFinished)
         {
-            AbilityData abilityData = new(user);
+            if(cooldownStore.GetTimeRemaining(this) == 0)
+            {
+                AbilityData abilityData = new(user);
 
-            targeting.StartTargeting(abilityData, () => TargetAcquired(abilityData));
+                targeting.StartTargeting(abilityData, () => TargetAcquired(abilityData, cooldownStore, abilityFinished));  
+            }
         }
 
-        void TargetAcquired(AbilityData abilityData)
+        void TargetAcquired(AbilityData data, CooldownStore cooldownStore, Action abilityFinished)
         {
             foreach(var effect in effects)
             {
-                effect.StartEffect(abilityData, abilityFinished);
+                effect.StartEffect(data, abilityFinished);
             }
+            
+            cooldownStore.StartCooldown(this, cooldownTime);
         }
     }
 }
