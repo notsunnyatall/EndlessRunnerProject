@@ -12,14 +12,16 @@ namespace EndlessRunner.Abilities
 
         public void Use(GameObject user)
         {
-            targeting.StartTargeting(user, TargetAcquired);
+            AbilityData abilityData = new(user);
+
+            targeting.StartTargeting(abilityData, () => TargetAcquired(abilityData));
         }
 
-        void TargetAcquired(GameObject target)
+        void TargetAcquired(AbilityData abilityData)
         {
             foreach(var effect in effects)
             {
-                effect.StartEffect(target, abilityFinished);
+                effect.StartEffect(abilityData, abilityFinished);
             }
         }
     }

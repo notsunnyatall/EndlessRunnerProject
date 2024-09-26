@@ -40,7 +40,7 @@ namespace EndlessRunner.Attributes
 
         public void Heal(int healPoints)
         {
-            if(!IsDead() && currentHealthPoints < maxHealthPoints)
+            if(!IsDead() && !HasFullHealth())
             {
                 currentHealthPoints = Mathf.Min(maxHealthPoints, currentHealthPoints + healPoints);
                 onHeal?.Invoke();
@@ -55,6 +55,11 @@ namespace EndlessRunner.Attributes
         bool IsDead()
         {
             return currentHealthPoints <= 0;
+        }
+
+        bool HasFullHealth()
+        {
+            return currentHealthPoints >= maxHealthPoints;
         }
     }
 }

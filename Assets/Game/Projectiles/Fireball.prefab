@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3678806173999623654
+--- !u!1001 &7407214929292075616
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,23 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6119001590488487, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_Name
-      value: Grounded Obstacle
+      value: Fireball
       objectReference: {fileID: 0}
     - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
-      propertyPath: m_Size.x
-      value: 3.3333333
+      propertyPath: m_Color.b
+      value: 0.17661981
       objectReference: {fileID: 0}
     - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
-      propertyPath: m_Size.y
-      value: 3.3333333
+      propertyPath: m_Color.g
+      value: 0.5561134
       objectReference: {fileID: 0}
     - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9acef8f842144af4188a6478615f56c2, type: 3}
-    - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
+      propertyPath: m_Color.r
+      value: 0.764151
       objectReference: {fileID: 0}
     - target: {fileID: 5366569455919718461, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70,7 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5696274576009103547, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: speed
-      value: 8
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696274576009103547, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
+      propertyPath: useGameSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696274576009103547, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
+      propertyPath: destroyAfterHit
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,6 +5,6 @@ namespace EndlessRunner.Abilities
 {
     public abstract class TargetingStrategy : ScriptableObject
     {
-        public abstract void StartTargeting(GameObject user, Action<GameObject> finished);
+        public abstract void StartTargeting(AbilityData abilityData, Action finished);
     }
 }

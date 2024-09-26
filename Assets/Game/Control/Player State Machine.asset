@@ -44,7 +44,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 8054db36-b3de-4031-9c40-91f10ea9aacd
   title: Entry
-  position: {x: 388, y: 176}
+  position: {x: 392, y: 163.56}
   transitions:
   - rootStateID: 8054db36-b3de-4031-9c40-91f10ea9aacd
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -71,7 +71,7 @@ MonoBehaviour:
     condition:
       and:
       - or:
-        - predicate: Input Action Pressed
+        - predicate: Input Action Hold
           parameters:
           - Jump
           negate: 0

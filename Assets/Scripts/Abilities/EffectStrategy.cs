@@ -5,6 +5,6 @@ namespace EndlessRunner.Abilities
 {
     public abstract class EffectStrategy : ScriptableObject
     {
-        public abstract void StartEffect(GameObject target, Action effectFinished);
+        public abstract void StartEffect(AbilityData abilityData, Action finished);
     }
 }

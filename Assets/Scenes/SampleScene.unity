@@ -1331,7 +1331,7 @@ PrefabInstance:
     - target: {fileID: 5486352412049359378, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: abilities.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: bdb7f85c68ca646e3b4992aed1d32a5f, type: 2}
+      objectReference: {fileID: 11400000, guid: 38ce4e4223b39493f8dc6ff7d834078e, type: 2}
     - target: {fileID: 6895810440443734139, guid: eca1aefd6b8dd4f4a8d50d378092acda, type: 3}
       propertyPath: m_Size.x
       value: 6

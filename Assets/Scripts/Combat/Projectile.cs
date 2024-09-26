@@ -8,10 +8,19 @@ namespace EndlessRunner.Combat
     public class Projectile : MonoBehaviour
     {
         [SerializeField] TriggerEffect effect;
+        [SerializeField] Vector2 direction = Vector2.left;
         [SerializeField] int effectPoints = 1;
-        [SerializeField] Vector2 moveDirection = Vector2.left;
+        [SerializeField] float speed = 5;
         [SerializeField] bool destroyAfterHit = false;
+        [SerializeField] bool useGameSpeed = true;
         GameSettings gameSettings;
+        GameObject user;
+
+        public void SetData(GameObject user, Vector2 direction)
+        {
+            this.user = user;
+            this.direction = direction;
+        }
 
         enum TriggerEffect
         {
@@ -26,7 +35,9 @@ namespace EndlessRunner.Combat
 
         void Update()
         {
-            transform.Translate(moveDirection * gameSettings.GetGameSpeed() * Time.deltaTime);
+            speed = useGameSpeed ? gameSettings.GetGameSpeed() : speed;
+
+            transform.Translate(direction * speed * Time.deltaTime);
         }
 
         void OnBecameInvisible()
@@ -36,20 +47,23 @@ namespace EndlessRunner.Combat
 
         void OnTriggerEnter(Collider other)
         {
-            switch (effect)
+            if(other.gameObject != user)
             {
-                case TriggerEffect.Damage:
-                    DoDamage(other);
-                    break;
+                switch(effect)
+                {
+                    case TriggerEffect.Damage:
+                        DoDamage(other);
+                        break;
 
-                case TriggerEffect.Currency:
-                    Deposit(other);
-                    break;
-            }
+                    case TriggerEffect.Currency:
+                        Deposit(other);
+                        break;
+                }
 
-            if(destroyAfterHit)
-            {
-                Destroy(gameObject);
+                if(destroyAfterHit)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
 

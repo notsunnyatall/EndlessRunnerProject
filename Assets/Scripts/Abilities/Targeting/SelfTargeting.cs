@@ -1,14 +1,15 @@
 using System;
 using UnityEngine;
 
-namespace EndlessRunner.Abilities
+namespace EndlessRunner.Abilities.Targeting
 {
     [CreateAssetMenu(menuName = "Abilities/Targeting/Self Targeting")]
     public class SelfTargeting : TargetingStrategy
     {
-        public override void StartTargeting(GameObject user, Action<GameObject> finished)
+        public override void StartTargeting(AbilityData abilityData, Action finished)
         {
-            finished(user);
+            abilityData.SetTarget(abilityData.GetUser());
+            finished();
         }
     }
 }
