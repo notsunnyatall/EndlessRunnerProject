@@ -44,7 +44,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 8054db36-b3de-4031-9c40-91f10ea9aacd
   title: Entry
-  position: {x: 392, y: 163.56}
+  position: {x: 382, y: 100.76}
   transitions:
   - rootStateID: 8054db36-b3de-4031-9c40-91f10ea9aacd
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -64,14 +64,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
   title: Locomotion State
-  position: {x: 374, y: 52}
+  position: {x: 373, y: 13}
   transitions:
   - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
     trueStateID: 9f634198-6c68-4a27-b854-649f63279193
     condition:
       and:
       - or:
-        - predicate: Input Action Hold
+        - predicate: Input Action Pressed
           parameters:
           - Jump
           negate: 0
@@ -80,9 +80,14 @@ MonoBehaviour:
           parameters: []
           negate: 0
   - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
-    trueStateID: f7f4bc6e-f187-4080-92ec-229db38194d9
+    trueStateID: ec10a18d-a90d-4503-834c-a75d56857c80
     condition:
       and:
+      - or:
+        - predicate: Can Use Ability
+          parameters:
+          - 0
+          negate: 0
       - or:
         - predicate: Input Action Pressed
           parameters:
@@ -92,6 +97,36 @@ MonoBehaviour:
   - actionID: Play Animation
     parameters:
     - Locomotion
+  onTickActions: []
+  onExitActions: []
+--- !u!114 &-1208027148283160145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c41c226ac830cc4badff91167841243, type: 3}
+  m_Name: ActionState
+  m_EditorClassIdentifier: 
+  uniqueID: ec10a18d-a90d-4503-834c-a75d56857c80
+  title: Ability State
+  position: {x: 643, y: 135.2}
+  transitions:
+  - rootStateID: ec10a18d-a90d-4503-834c-a75d56857c80
+    trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
+    condition:
+      and:
+      - or:
+        - predicate: Ability Finished
+          parameters: []
+          negate: 0
+  onEnterActions:
+  - actionID: Use Ability
+    parameters:
+    - 0
   onTickActions: []
   onExitActions: []
 --- !u!114 &-627141906754884099
@@ -153,7 +188,7 @@ MonoBehaviour:
   - {fileID: -1740323444286328881}
   - {fileID: -627141906754884099}
   - {fileID: 5933781376960935777}
-  - {fileID: 4678619429082886587}
+  - {fileID: -1208027148283160145}
 --- !u!114 &4678619429082886587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,5 +263,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: bcd51f00-2dd7-4911-b1b0-b23a7f0bf0a3
   title: Any
-  position: {x: 396.00003, y: 220}
+  position: {x: 161, y: 21}
   transitions: []

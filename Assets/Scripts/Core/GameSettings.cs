@@ -7,6 +7,7 @@ namespace EndlessRunner.Core
     {   
         [SerializeField] float initalSpeed = 1;
         [SerializeField] float speedMultiplier = 0.3f;
+        [SerializeField] float maxSpeed = 10;
         float speed = 0;
 
         public float GetGameSpeed()
@@ -21,7 +22,7 @@ namespace EndlessRunner.Core
 
         void Update()
         {
-            speed += speedMultiplier * Time.deltaTime;
+            speed = Mathf.Min(maxSpeed, speed + (speedMultiplier * Time.deltaTime));
         }
     }
 }

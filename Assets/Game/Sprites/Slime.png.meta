@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ede4b03d4049f481a80ce6756418b385
+guid: 55241acd6a262d748b88df337421379f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -30,11 +30,11 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 1024
+  textureFormat: 1
+  maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,13 +63,13 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -82,7 +82,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,85 +97,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coin-animation_0
+      name: Slime_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 65
-        height: 64
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3213e26135de0ac70800000000000000
-      internalID: 8980438598086963491
+      spriteID: 543ec512f15e5234892fb8b02398d78a
+      internalID: -334441292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin-animation_1
+      name: Slime_1
       rect:
         serializedVersion: 2
-        x: 71
+        x: 96
         y: 0
-        width: 51
-        height: 64
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c7c5bc9deb46a6e20800000000000000
-      internalID: 3344596444136561788
+      spriteID: ce6ad0b661ca00848987cd1d450fc1ed
+      internalID: 1407424102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin-animation_2
+      name: Slime_2
       rect:
         serializedVersion: 2
-        x: 149
+        x: 192
         y: 0
-        width: 23
-        height: 64
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 427b1cdc640541010800000000000000
-      internalID: 1158639269171017508
+      spriteID: b1ba0dac704c007459a019df1b4d2003
+      internalID: 123915704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin-animation_3
+      name: Slime_3
       rect:
         serializedVersion: 2
-        x: 199
+        x: 288
         y: 0
-        width: 50
-        height: 64
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e6ef0a5cb5af635a0800000000000000
-      internalID: -6541766136644436370
+      spriteID: 589cb2aed75686a409eff030621a9cf6
+      internalID: -1522646070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe908e5ce1f49ad48a7918c38ef0580c
+      internalID: 812682133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10a4dc164a5d3e43add8a6f8af3c38c
+      internalID: 1394053285
       vertices: []
       indices: 
       edges: []
@@ -183,7 +225,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -191,10 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      coin-animation_0: 8980438598086963491
-      coin-animation_1: 3344596444136561788
-      coin-animation_2: 1158639269171017508
-      coin-animation_3: -6541766136644436370
+      Slime_0: -334441292
+      Slime_1: 1407424102
+      Slime_2: 123915704
+      Slime_3: -1522646070
+      Slime_4: 812682133
+      Slime_5: 1394053285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

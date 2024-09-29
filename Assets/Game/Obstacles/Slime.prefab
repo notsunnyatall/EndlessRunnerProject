@@ -10,20 +10,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6119001590488487, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_Name
-      value: Nature Slime
+      value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_Size.x
-      value: 3.3333333
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_Size.y
-      value: 3.3333333
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9acef8f842144af4188a6478615f56c2, type: 3}
+      objectReference: {fileID: -334441292, guid: 55241acd6a262d748b88df337421379f, type: 3}
     - target: {fileID: 1107794776779528787, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -70,18 +74,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5696274576009103547, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: speed
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5696274576009103547, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
       propertyPath: direction.x
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5696274576009103547, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
-      propertyPath: destroyAfterHit
+      propertyPath: useGameSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696274576009103547, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
+      propertyPath: destroyAfterHit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6119001590488487, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 251633067350774206}
   m_SourcePrefab: {fileID: 100100000, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
+--- !u!1 &3681696587872776257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6119001590488487, guid: 66b7eb54856eb4718b6ba4cf7db17f7d, type: 3}
+  m_PrefabInstance: {fileID: 3678806173999623654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &251633067350774206
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681696587872776257}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 096dfc5476a34ad45b5be65080ee5803, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

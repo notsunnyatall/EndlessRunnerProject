@@ -31,7 +31,7 @@ namespace EndlessRunner.UI
 
         void Refresh()
         {
-            balanceText.text = $"${playerPurse.GetBalance()}";
+            balanceText.text = $"{playerPurse.GetBalance()}";
         }
     }
 }
