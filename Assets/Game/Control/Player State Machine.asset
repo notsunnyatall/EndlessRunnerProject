@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
   title: Locomotion State
-  position: {x: 373, y: 13}
+  position: {x: 382.0001, y: 18.999964}
   transitions:
   - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
     trueStateID: 9f634198-6c68-4a27-b854-649f63279193
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
   title: Fall State
-  position: {x: 666.06, y: 16}
+  position: {x: 693, y: 0.9999714}
   transitions:
   - rootStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7

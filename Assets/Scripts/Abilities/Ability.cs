@@ -1,4 +1,5 @@
 using System;
+using EndlessRunner.Attributes;
 using EndlessRunner.Core;
 using UnityEngine;
 
@@ -10,18 +11,30 @@ namespace EndlessRunner.Abilities
         [SerializeField] TargetingStrategy targeting;
         [SerializeField] EffectStrategy[] effects;
         [SerializeField] float cooldownTime = 5;
+        [SerializeField] float manaCost = 5;
 
-        public void Use(GameObject user, CooldownStore cooldownStore, Action abilityFinished)
+        public bool CanUse(CooldownStore cooldownStore, Mana mana)
         {
-            if(cooldownStore.GetTimeRemaining(this) == 0)
+            return cooldownStore.GetTimeRemaining(this) == 0 && mana.CanUse(manaCost);
+        }
+
+        public void Use(GameObject user, CooldownStore cooldownStore, Mana mana, Action abilityFinished)
+        {
+            if(CanUse(cooldownStore, mana))
             {
                 AbilityData abilityData = new(user);
 
-                targeting.StartTargeting(abilityData, () => TargetAcquired(abilityData, cooldownStore, abilityFinished));  
+                targeting.StartTargeting(abilityData, () => TargetAcquired
+                (
+                    abilityData, 
+                    cooldownStore, 
+                    mana, 
+                    abilityFinished
+                ));  
             }
         }
 
-        void TargetAcquired(AbilityData data, CooldownStore cooldownStore, Action abilityFinished)
+        void TargetAcquired(AbilityData data, CooldownStore cooldownStore, Mana mana, Action abilityFinished)
         {
             foreach(var effect in effects)
             {
@@ -29,6 +42,7 @@ namespace EndlessRunner.Abilities
             }
             
             cooldownStore.StartCooldown(this, cooldownTime);
+            mana.Use(manaCost);
         }
     }
 }

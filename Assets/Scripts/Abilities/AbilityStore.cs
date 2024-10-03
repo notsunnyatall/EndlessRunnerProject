@@ -1,3 +1,4 @@
+using EndlessRunner.Attributes;
 using EndlessRunner.Core;
 using RainbowAssets.Utils;
 using UnityEngine;
@@ -9,21 +10,18 @@ namespace EndlessRunner.Abilities
         [SerializeField] Ability[] abilities;
         Ability currentAbility = null;
         CooldownStore cooldownStore;
+        Mana mana;
 
         void Awake()
         {
             cooldownStore = GetComponent<CooldownStore>();
+            mana = GetComponent<Mana>();
         }
 
         void Use(int index)
         {   
             currentAbility = abilities[index];
-            currentAbility.Use(gameObject, cooldownStore, AbilityFinished);
-        }
-
-        bool CanUse(int index)
-        {
-            return cooldownStore.GetTimeRemaining(abilities[index]) == 0;
+            currentAbility.Use(gameObject, cooldownStore, mana, AbilityFinished);
         }
 
         void AbilityFinished()
@@ -49,7 +47,7 @@ namespace EndlessRunner.Abilities
                     return currentAbility == null;
 
                 case "Can Use Ability":
-                    return CanUse(int.Parse(parameters[0]));
+                    return abilities[int.Parse(parameters[0])].CanUse(cooldownStore, mana);
             }
 
             return null;
