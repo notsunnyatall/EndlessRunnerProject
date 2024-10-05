@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db1be0c63f7ca4df9bf1804e22d7d63d, type: 3}
-  m_Name: Fireball
+  m_Name: Healing Potion
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: a3ec9321daf797b4ca56c16c94303aa5, type: 3}
+  icon: {fileID: 21300000, guid: ed2cc9b9f60a74cc880f8a52f18b8f9b, type: 3}
   targeting: {fileID: 11400000, guid: 8c80db8d4295b4459b7dcfdafda50df1, type: 2}
   effects:
-  - {fileID: 11400000, guid: 3be976de003994f8c9020f19441996c9, type: 2}
-  cooldownTime: 10
+  - {fileID: 11400000, guid: b7d4ef0574f53409f8e21fa9cdc03131, type: 2}
+  - {fileID: 11400000, guid: 5dff5f4be45e5b54ebbfc77898c7fc7b, type: 2}
+  cooldownTime: 5
   manaCost: 5

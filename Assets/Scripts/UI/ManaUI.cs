@@ -1,11 +1,12 @@
 using EndlessRunner.Attributes;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace EndlessRunner.UI
 {
     public class ManaUI : MonoBehaviour
     {
-        [SerializeField] RectTransform foreground;
+        [SerializeField] Image foreground;
         Mana playerMana;
 
         void Awake()
@@ -15,7 +16,7 @@ namespace EndlessRunner.UI
 
         void Update()
         {
-            foreground.localScale = new Vector3(1, playerMana.GetManaFraction(), 1);
+            foreground.fillAmount = playerMana.GetManaFraction();
         }
     }
 }

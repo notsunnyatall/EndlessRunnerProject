@@ -1,12 +1,13 @@
 using System;
 using EndlessRunner.Attributes;
 using EndlessRunner.Core;
+using EndlessRunner.Inventories;
 using UnityEngine;
 
 namespace EndlessRunner.Abilities
 {
     [CreateAssetMenu(menuName = "Abilities/New Ability")]
-    public class Ability : ScriptableObject
+    public class Ability : InventoryItem
     {
         [SerializeField] TargetingStrategy targeting;
         [SerializeField] EffectStrategy[] effects;

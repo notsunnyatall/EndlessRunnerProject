@@ -12,6 +12,11 @@ namespace EndlessRunner.Abilities
         CooldownStore cooldownStore;
         Mana mana;
 
+        public Ability GetAbility(int index)
+        {
+            return abilities[index];
+        }
+
         void Awake()
         {
             cooldownStore = GetComponent<CooldownStore>();

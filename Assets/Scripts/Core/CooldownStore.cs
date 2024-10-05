@@ -5,18 +5,30 @@ namespace EndlessRunner.Core
 {
     public class CooldownStore : MonoBehaviour
     {
-        Dictionary<object, float> cooldownLookup = new();
+        Dictionary<object, float> cooldownTimers = new();
+        Dictionary<object, float> initialCooldownTimers = new();
 
         public void StartCooldown(object target, float cooldownTime)
         {
-            cooldownLookup[target] = cooldownTime;
+            cooldownTimers[target] = cooldownTime;
+            initialCooldownTimers[target] = cooldownTime;
         }
 
         public float GetTimeRemaining(object target)
         {
-            if(cooldownLookup.ContainsKey(target))
+            if(cooldownTimers.ContainsKey(target))
             {
-                return cooldownLookup[target];
+                return cooldownTimers[target];
+            }
+
+            return 0;
+        }
+
+        public float GetFractionRemaining(object target)
+        {
+            if(cooldownTimers.ContainsKey(target))
+            {
+                return cooldownTimers[target] / initialCooldownTimers[target];
             }
 
             return 0;
@@ -24,15 +36,16 @@ namespace EndlessRunner.Core
 
         void Update()
         {
-            var keys = new List<object>(cooldownLookup.Keys);
+            var keys = new List<object>(cooldownTimers.Keys);
 
             foreach(var key in keys)
             {
-                cooldownLookup[key] -= Time.deltaTime;
+                cooldownTimers[key] -= Time.deltaTime;
 
-                if(cooldownLookup[key] < 0)
+                if(cooldownTimers[key] < 0)
                 {
-                    cooldownLookup.Remove(key);
+                    cooldownTimers.Remove(key);
+                    initialCooldownTimers.Remove(key);
                 }
             }
         }

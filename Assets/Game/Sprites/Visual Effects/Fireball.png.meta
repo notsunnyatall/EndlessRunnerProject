@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6760677b9cd33644960384bae6fac52
+guid: b0819f863658fe14b8fa2372118c02c8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mana Bar_0
+      name: Fireball_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 108
-        height: 192
+        width: 168
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ceb70e6a6277544991e30593bc4c422
-      internalID: 1942989780
+      spriteID: 3e0456a974b0eda4d9d666d5136b5650
+      internalID: 208109448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mana Bar_1
+      name: Fireball_1
       rect:
         serializedVersion: 2
-        x: 108
+        x: 168
         y: 0
-        width: 108
-        height: 192
+        width: 168
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2b2d104d96ad454aa7b363f3f70bbab
-      internalID: -2095717336
+      spriteID: 95a6e0787dfda794db502c46bf1f113d
+      internalID: -2079991472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fireball_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 168
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde59e24698058b41b373072ad318953
+      internalID: 1118753213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fireball_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 168
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12837b19b45a324197320f99392c50e
+      internalID: -2126485458
       vertices: []
       indices: 
       edges: []
@@ -149,8 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mana Bar_0: 1942989780
-      Mana Bar_1: -2095717336
+      Fireball_0: 208109448
+      Fireball_1: -2079991472
+      Fireball_2: 1118753213
+      Fireball_3: -2126485458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

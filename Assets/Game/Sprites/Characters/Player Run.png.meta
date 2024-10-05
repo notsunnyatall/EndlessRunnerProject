@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6760677b9cd33644960384bae6fac52
+guid: 702d7bfd3f5534a4ab6c05603937f77f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mana Bar_0
+      name: Run_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 108
-        height: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ceb70e6a6277544991e30593bc4c422
-      internalID: 1942989780
+      spriteID: b5ad1ab491009c14fa78223d24dba7de
+      internalID: -424442193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mana Bar_1
+      name: Run_1
       rect:
         serializedVersion: 2
         x: 108
         y: 0
         width: 108
-        height: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2b2d104d96ad454aa7b363f3f70bbab
-      internalID: -2095717336
+      spriteID: 5ddb22c3971aba744b69ef9127a366ef
+      internalID: 571565054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2045ed1ebb32c0479a7cd9a9d236def
+      internalID: -1410871056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_3
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a420ada2bd741644a1823ba7fb2e07a
+      internalID: -2093568087
       vertices: []
       indices: 
       edges: []
@@ -149,8 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mana Bar_0: 1942989780
-      Mana Bar_1: -2095717336
+      Run_0: -424442193
+      Run_1: 571565054
+      Run_2: -1410871056
+      Run_3: -2093568087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
