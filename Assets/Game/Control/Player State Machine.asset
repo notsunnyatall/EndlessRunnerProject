@@ -44,7 +44,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 8054db36-b3de-4031-9c40-91f10ea9aacd
   title: Entry
-  position: {x: 382, y: 100.76}
+  position: {x: 180, y: 97}
   transitions:
   - rootStateID: 8054db36-b3de-4031-9c40-91f10ea9aacd
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
   title: Locomotion State
-  position: {x: 382.0001, y: 18.999964}
+  position: {x: 405, y: 37}
   transitions:
   - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
     trueStateID: 9f634198-6c68-4a27-b854-649f63279193
@@ -93,6 +93,20 @@ MonoBehaviour:
           parameters:
           - Ability 1
           negate: 0
+  - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
+    trueStateID: b0ce589b-3b7f-4099-a746-906442c20f78
+    condition:
+      and:
+      - or:
+        - predicate: Can Use Ability
+          parameters:
+          - 1
+          negate: 0
+      - or:
+        - predicate: Input Action Pressed
+          parameters:
+          - Ability 2
+          negate: 0
   onEnterActions:
   - actionID: Play Animation
     parameters:
@@ -112,8 +126,8 @@ MonoBehaviour:
   m_Name: ActionState
   m_EditorClassIdentifier: 
   uniqueID: ec10a18d-a90d-4503-834c-a75d56857c80
-  title: Ability State
-  position: {x: 643, y: 135.2}
+  title: Ability 1 State
+  position: {x: 628.99994, y: 105}
   transitions:
   - rootStateID: ec10a18d-a90d-4503-834c-a75d56857c80
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -143,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 9f634198-6c68-4a27-b854-649f63279193
   title: Jump State
-  position: {x: 374.00006, y: -91.900024}
+  position: {x: 394.99997, y: -71.77228}
   transitions:
   - rootStateID: 9f634198-6c68-4a27-b854-649f63279193
     trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
@@ -189,6 +203,37 @@ MonoBehaviour:
   - {fileID: -627141906754884099}
   - {fileID: 5933781376960935777}
   - {fileID: -1208027148283160145}
+  - {fileID: 344528443016927856}
+--- !u!114 &344528443016927856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c41c226ac830cc4badff91167841243, type: 3}
+  m_Name: ActionState
+  m_EditorClassIdentifier: 
+  uniqueID: b0ce589b-3b7f-4099-a746-906442c20f78
+  title: Ability 2 State
+  position: {x: 402.99997, y: 139}
+  transitions:
+  - rootStateID: b0ce589b-3b7f-4099-a746-906442c20f78
+    trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
+    condition:
+      and:
+      - or:
+        - predicate: Ability Finished
+          parameters: []
+          negate: 0
+  onEnterActions:
+  - actionID: Use Ability
+    parameters:
+    - 1
+  onTickActions: []
+  onExitActions: []
 --- !u!114 &4678619429082886587
 MonoBehaviour:
   m_ObjectHideFlags: 0
