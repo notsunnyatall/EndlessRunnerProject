@@ -44,7 +44,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 8054db36-b3de-4031-9c40-91f10ea9aacd
   title: Entry
-  position: {x: 180, y: 97}
+  position: {x: 169.48499, y: 44.99999}
   transitions:
   - rootStateID: 8054db36-b3de-4031-9c40-91f10ea9aacd
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -79,34 +79,6 @@ MonoBehaviour:
         - predicate: Is Grounded
           parameters: []
           negate: 0
-  - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
-    trueStateID: ec10a18d-a90d-4503-834c-a75d56857c80
-    condition:
-      and:
-      - or:
-        - predicate: Can Use Ability
-          parameters:
-          - 0
-          negate: 0
-      - or:
-        - predicate: Input Action Pressed
-          parameters:
-          - Ability 1
-          negate: 0
-  - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
-    trueStateID: b0ce589b-3b7f-4099-a746-906442c20f78
-    condition:
-      and:
-      - or:
-        - predicate: Can Use Ability
-          parameters:
-          - 1
-          negate: 0
-      - or:
-        - predicate: Input Action Pressed
-          parameters:
-          - Ability 2
-          negate: 0
   onEnterActions:
   - actionID: Play Animation
     parameters:
@@ -127,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: ec10a18d-a90d-4503-834c-a75d56857c80
   title: Ability 1 State
-  position: {x: 628.99994, y: 105}
+  position: {x: 648.60004, y: 175.00002}
   transitions:
   - rootStateID: ec10a18d-a90d-4503-834c-a75d56857c80
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -137,6 +109,22 @@ MonoBehaviour:
         - predicate: Ability Finished
           parameters: []
           negate: 0
+      - or:
+        - predicate: Is Grounded
+          parameters: []
+          negate: 0
+  - rootStateID: ec10a18d-a90d-4503-834c-a75d56857c80
+    trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
+    condition:
+      and:
+      - or:
+        - predicate: Ability Finished
+          parameters: []
+          negate: 0
+      - or:
+        - predicate: Is Grounded
+          parameters: []
+          negate: 1
   onEnterActions:
   - actionID: Use Ability
     parameters:
@@ -157,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 9f634198-6c68-4a27-b854-649f63279193
   title: Jump State
-  position: {x: 394.99997, y: -71.77228}
+  position: {x: 508, y: -70.32001}
   transitions:
   - rootStateID: 9f634198-6c68-4a27-b854-649f63279193
     trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
@@ -218,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: b0ce589b-3b7f-4099-a746-906442c20f78
   title: Ability 2 State
-  position: {x: 402.99997, y: 139}
+  position: {x: 413.00006, y: 166.65201}
   transitions:
   - rootStateID: b0ce589b-3b7f-4099-a746-906442c20f78
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -228,6 +216,22 @@ MonoBehaviour:
         - predicate: Ability Finished
           parameters: []
           negate: 0
+      - or:
+        - predicate: Is Grounded
+          parameters: []
+          negate: 0
+  - rootStateID: b0ce589b-3b7f-4099-a746-906442c20f78
+    trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
+    condition:
+      and:
+      - or:
+        - predicate: Ability Finished
+          parameters: []
+          negate: 0
+      - or:
+        - predicate: Is Grounded
+          parameters: []
+          negate: 1
   onEnterActions:
   - actionID: Use Ability
     parameters:
@@ -278,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
   title: Fall State
-  position: {x: 693, y: 0.9999714}
+  position: {x: 689, y: 33.679993}
   transitions:
   - rootStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -308,5 +312,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: bcd51f00-2dd7-4911-b1b0-b23a7f0bf0a3
   title: Any
-  position: {x: 161, y: 21}
-  transitions: []
+  position: {x: 544.00006, y: 270.11603}
+  transitions:
+  - rootStateID: bcd51f00-2dd7-4911-b1b0-b23a7f0bf0a3
+    trueStateID: ec10a18d-a90d-4503-834c-a75d56857c80
+    condition:
+      and:
+      - or:
+        - predicate: Can Use Ability
+          parameters:
+          - 0
+          negate: 0
+      - or:
+        - predicate: Input Action Pressed
+          parameters:
+          - Ability 1
+          negate: 0
+  - rootStateID: bcd51f00-2dd7-4911-b1b0-b23a7f0bf0a3
+    trueStateID: b0ce589b-3b7f-4099-a746-906442c20f78
+    condition:
+      and:
+      - or:
+        - predicate: Can Use Ability
+          parameters:
+          - 1
+          negate: 0
+      - or:
+        - predicate: Input Action Pressed
+          parameters:
+          - Ability 2
+          negate: 0

@@ -1,3 +1,4 @@
+using System.Collections;
 using RainbowAssets.Utils;
 using UnityEngine;
 
@@ -8,9 +9,11 @@ namespace EndlessRunner.Core
         [SerializeField] float jumpForce = 0.15f;
         [SerializeField] float jumpTime = 0.15f;
         [SerializeField] float gravityMultiplier = 3;
+        [SerializeField] float edgeHitDuration = 0.2f;
         CharacterController controller;
         float verticalVelocity = 0;
         float timeSinceJumped = Mathf.Infinity;
+        bool edgeHit = false;
 
         void Awake()
         {
@@ -28,7 +31,7 @@ namespace EndlessRunner.Core
         {
             float gravity = Physics.gravity.y * gravityMultiplier * Time.deltaTime;
 
-            if(controller.isGrounded && verticalVelocity < 0)
+            if(controller.isGrounded && verticalVelocity < 0 && !edgeHit)
             {
                 verticalVelocity = gravity;
             }
@@ -50,6 +53,21 @@ namespace EndlessRunner.Core
             verticalVelocity = jumpForce;
         }
 
+        void OnTriggerEnter(Collider other)
+        {
+            if(other.CompareTag("Edge"))
+            {
+                StartCoroutine(EdgeHitRoutine());
+            }
+        }
+
+        IEnumerator EdgeHitRoutine()
+        {
+            edgeHit = true;
+            yield return new WaitForSeconds(edgeHitDuration);
+            edgeHit = false;
+        }
+
         void IAction.DoAction(string actionID, string[] parameters)
         {
             switch(actionID)
@@ -69,7 +87,7 @@ namespace EndlessRunner.Core
             switch(predicate)
             {
                 case "Is Grounded":
-                    return controller.isGrounded;
+                    return controller.isGrounded && !edgeHit;
 
                 case "Jump Time Finished":
                     return JumpTimeFinished();

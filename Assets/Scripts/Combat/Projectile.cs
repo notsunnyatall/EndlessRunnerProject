@@ -25,7 +25,8 @@ namespace EndlessRunner.Combat
         enum TriggerEffect
         {
             Damage,
-            Currency
+            Currency,
+            None
         }
 
         void Awake()
@@ -57,6 +58,9 @@ namespace EndlessRunner.Combat
 
                     case TriggerEffect.Currency:
                         Deposit(other);
+                        break;
+
+                    case TriggerEffect.None:
                         break;
                 }
 
