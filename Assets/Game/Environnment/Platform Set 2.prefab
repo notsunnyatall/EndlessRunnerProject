@@ -78,6 +78,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 579730832159889527}
     m_Modifications:
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1256801
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4237977
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Center.x
+      value: 0.014396548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Center.y
+      value: -0.24297024
+      objectReference: {fileID: 0}
     - target: {fileID: 4245065599491734935, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
       propertyPath: m_Name
       value: Base Platform (2)
@@ -433,6 +449,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 579730832159889527}
     m_Modifications:
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2450838
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4756994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Size.z
+      value: 1.5999172
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Center.x
+      value: 0.014449682
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Center.y
+      value: -0.21701929
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778396868751774387, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
+      propertyPath: m_Center.z
+      value: 0.04566872
+      objectReference: {fileID: 0}
     - target: {fileID: 4245065599491734935, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
       propertyPath: m_Name
       value: Base Platform (1)

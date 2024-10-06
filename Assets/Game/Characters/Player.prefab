@@ -45,8 +45,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3780669997960815054, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      propertyPath: m_Height
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780669997960815054, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780669997960815054, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_Center.y
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6470861768112260203, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: initialHealthPoints
@@ -295,6 +303,7 @@ MonoBehaviour:
   jumpForce: 0.1
   jumpTime: 0.05
   gravityMultiplier: 3.2
+  edgeHitDuration: 0.2
 --- !u!114 &3596059462745750975
 MonoBehaviour:
   m_ObjectHideFlags: 0

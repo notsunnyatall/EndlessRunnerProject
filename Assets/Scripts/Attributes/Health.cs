@@ -47,6 +47,11 @@ namespace EndlessRunner.Attributes
             }
         }
 
+        public void Kill()
+        {
+            TakeDamage(currentHealthPoints);
+        }
+
         void Awake()
         {
             currentHealthPoints = maxHealthPoints;
