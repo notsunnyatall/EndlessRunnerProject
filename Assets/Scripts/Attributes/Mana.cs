@@ -13,17 +13,20 @@ namespace EndlessRunner.Attributes
             return currentMana / maxMana;
         }
 
-        public bool CanUse(float manaToUse)
+        public float GetCurrentMana()
         {
-            return manaToUse <= currentMana;
+            return currentMana;
         }
 
-        public void Use(float manaToUse)
+        public bool Use(float manaToUse)
         {
-            if(CanUse(manaToUse))
+            if(manaToUse > currentMana)
             {
-                currentMana -= manaToUse;
+                return false;
             }
+
+            currentMana -= manaToUse;
+            return true;
         }
 
         void Awake()

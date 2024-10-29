@@ -15,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Ability 1",
+                    "name": "Use Ability",
                     "type": "Button",
                     "id": "7a02d2ee-7a0a-4c41-8af3-faa3f9ee07b3",
                     "expectedControlType": "Button",
@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Ability 2",
+                    "name": "Scroll Ability",
                     "type": "Button",
                     "id": "719cdb5f-475a-498d-9c21-b2053e941550",
                     "expectedControlType": "Button",
@@ -52,7 +52,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse & Keyboard",
-                    "action": "Ability 1",
+                    "action": "Use Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -63,7 +63,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse & Keyboard",
-                    "action": "Ability 2",
+                    "action": "Scroll Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

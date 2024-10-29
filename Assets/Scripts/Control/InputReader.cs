@@ -8,15 +8,15 @@ namespace EndlessRunner.Control
     {
         PlayerInput playerInput;
 
+        public InputAction GetInputAction(string actionName)
+        {
+            return playerInput.actions[actionName];
+        } 
+
         void Awake()
         {
             playerInput = GetComponent<PlayerInput>();
         }
-
-        InputAction GetInputAction(string actionName)
-        {
-            return playerInput.actions[actionName];
-        } 
 
         bool? IPredicateEvaluator.Evaluate(string predicate, string[] parameters)
         {

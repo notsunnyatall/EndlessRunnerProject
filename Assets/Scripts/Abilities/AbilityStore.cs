@@ -1,61 +1,50 @@
-using EndlessRunner.Attributes;
-using EndlessRunner.Core;
-using RainbowAssets.Utils;
+using System;
+using EndlessRunner.Control;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace EndlessRunner.Abilities
 {
-    public class AbilityStore : MonoBehaviour, IAction, IPredicateEvaluator
+    public class AbilityStore : MonoBehaviour
     {
         [SerializeField] Ability[] abilities;
-        Ability currentAbility = null;
-        CooldownStore cooldownStore;
-        Mana mana;
+        InputReader inputReader;
+        int currentAbilityIndex = 0;
+        public event Action storeUpdated;
 
-        public Ability GetAbility(int index)
+        public Ability GetCurrentAbility()
         {
-            return abilities[index];
+            return abilities[currentAbilityIndex];
         }
 
         void Awake()
         {
-            cooldownStore = GetComponent<CooldownStore>();
-            mana = GetComponent<Mana>();
+            inputReader = GetComponent<InputReader>();
         }
 
-        void Use(int index)
-        {   
-            currentAbility = abilities[index];
-            currentAbility.Use(gameObject, cooldownStore, mana, AbilityFinished);
-        }
-
-        void AbilityFinished()
-        {   
-            currentAbility = null;
-        }
-
-        void IAction.DoAction(string actionID, string[] parameters)
+        void Start()
         {
-            switch(actionID)
+            inputReader.GetInputAction("Use Ability").performed += UseAbility;
+            inputReader.GetInputAction("Scroll Ability").performed += ScrollAbility;
+        }
+
+        void UseAbility(InputAction.CallbackContext context)
+        {   
+            GetCurrentAbility().Use(gameObject);
+        }
+
+        void ScrollAbility(InputAction.CallbackContext context)
+        {
+            if(currentAbilityIndex == abilities.Length - 1)
             {
-                case "Use Ability":
-                    Use(int.Parse(parameters[0]));
-                    break;
+                currentAbilityIndex = 0;
             }
-        }
-
-        bool? IPredicateEvaluator.Evaluate(string predicate, string[] parameters)
-        {
-            switch(predicate)
+            else
             {
-                case "Ability Finished":
-                    return currentAbility == null;
-
-                case "Can Use Ability":
-                    return abilities[int.Parse(parameters[0])].CanUse(cooldownStore, mana);
+                currentAbilityIndex++;
             }
 
-            return null;
+            storeUpdated?.Invoke();
         }
     }
 }

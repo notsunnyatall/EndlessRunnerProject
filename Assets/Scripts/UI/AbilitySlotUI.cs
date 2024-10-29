@@ -7,12 +7,10 @@ namespace EndlessRunner.UI
 {
     public class AbilitySlotUI : MonoBehaviour
     {
-        [SerializeField] int slotIndex;
         [SerializeField] Image iconImage;
         [SerializeField] Image cooldownOverlay;
         AbilityStore abilityStore;
         CooldownStore cooldownStore;
-        Ability ability;
 
         void Awake()
         {
@@ -20,18 +18,21 @@ namespace EndlessRunner.UI
 
             abilityStore = player.GetComponent<AbilityStore>();
             cooldownStore = player.GetComponent<CooldownStore>();
-
-            ability = abilityStore.GetAbility(slotIndex);
         }
 
         void Start()
         {
-            iconImage.sprite = ability.GetIcon();
+            abilityStore.storeUpdated += Refresh;
         }
 
         void Update()
         {
-            cooldownOverlay.fillAmount = cooldownStore.GetFractionRemaining(ability);
+            cooldownOverlay.fillAmount = cooldownStore.GetFractionRemaining(abilityStore.GetCurrentAbility());
+        }
+
+        void Refresh()
+        {
+            iconImage.sprite = abilityStore.GetCurrentAbility().GetIcon();
         }
     }
 }
