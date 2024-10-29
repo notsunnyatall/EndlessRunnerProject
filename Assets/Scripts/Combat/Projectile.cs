@@ -13,8 +13,10 @@ namespace EndlessRunner.Combat
         [SerializeField] float speed = 5;
         [SerializeField] bool destroyAfterHit = false;
         [SerializeField] bool useGameSpeed = true;
+        [SerializeField] int hitsBeforeDestroy = 3;
         GameSettings gameSettings;
         GameObject user;
+        int currentHits = 0;
 
         public void SetData(GameObject user, Vector2 direction)
         {
@@ -64,7 +66,9 @@ namespace EndlessRunner.Combat
                         break;
                 }
 
-                if(destroyAfterHit)
+                currentHits++;
+
+                if(destroyAfterHit && currentHits >= hitsBeforeDestroy)
                 {
                     Destroy(gameObject);
                 }

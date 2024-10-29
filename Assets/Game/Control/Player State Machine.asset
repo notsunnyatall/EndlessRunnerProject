@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
   title: Locomotion State
-  position: {x: 405, y: 37}
+  position: {x: 421, y: 53}
   transitions:
   - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
     trueStateID: 9f634198-6c68-4a27-b854-649f63279193
@@ -77,6 +77,14 @@ MonoBehaviour:
           negate: 0
       - or:
         - predicate: Is Grounded
+          parameters: []
+          negate: 0
+  - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
+    trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
+    condition:
+      and:
+      - or:
+        - predicate: Edge Hit
           parameters: []
           negate: 0
   onEnterActions:

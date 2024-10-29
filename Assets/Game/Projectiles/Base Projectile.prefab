@@ -125,3 +125,4 @@ MonoBehaviour:
   speed: 1
   destroyAfterHit: 0
   useGameSpeed: 0
+  hitsBeforeDestroy: 1

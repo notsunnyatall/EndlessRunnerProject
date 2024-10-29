@@ -91,6 +91,9 @@ namespace EndlessRunner.Core
 
                 case "Jump Time Finished":
                     return JumpTimeFinished();
+
+                case "Edge Hit":
+                    return edgeHit;
             }
 
             return null;

@@ -832,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: initialPlatform.spawnDistance
@@ -875,6 +875,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5051333403698996474, guid: 8a7e91f5c8c8af543a9a743fe030f95e, type: 3}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[1].platform
+      value: 
+      objectReference: {fileID: 5051333403698996474, guid: 55dd95764a1074c22ab0b3be6860d4a1, type: 3}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: obstaclesConfig.Array.data[0].objectToSpawn
       value: 
       objectReference: {fileID: 6242964756009250038, guid: fe3454e5fdd7ca741ac967af685b3e19, type: 3}
@@ -888,6 +892,10 @@ PrefabInstance:
       objectReference: {fileID: 2411027238016280898, guid: f605ddcf9bf764cb6808f575fddcbe9b, type: 3}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[0].spawnDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[1].spawnDistance
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
@@ -1252,11 +1260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234943460495521288, guid: 8e8f86b9fcb3594499e51021d2d7fd65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.411644
+      value: -9.52
       objectReference: {fileID: 0}
     - target: {fileID: 4234943460495521288, guid: 8e8f86b9fcb3594499e51021d2d7fd65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2886024
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 4234943460495521288, guid: 8e8f86b9fcb3594499e51021d2d7fd65, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1648,7 +1656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8317833159003197779, guid: 5afe3cb3f82df0348a555cd99174bab7, type: 3}
       propertyPath: initalSpeed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8317833159003197779, guid: 5afe3cb3f82df0348a555cd99174bab7, type: 3}
       propertyPath: speedMultiplier
