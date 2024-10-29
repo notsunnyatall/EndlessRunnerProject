@@ -2,7 +2,7 @@ using System;
 using EndlessRunner.Attributes;
 using UnityEngine;
 
-namespace EndlessRunner.Abilities.Effect
+namespace EndlessRunner.Abilities.Effects
 {
     [CreateAssetMenu(menuName = "Abilities/Effects/Health Effect")]
     public class HealthEffect : EffectStrategy
