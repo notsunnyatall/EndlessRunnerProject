@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3780669997960815054, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6470861768112260203, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: initialHealthPoints
       value: 3
@@ -213,9 +217,6 @@ PrefabInstance:
       addedObject: {fileID: 8041726403148149173}
     - targetCorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4970527418725496204}
-    - targetCorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4334815632398703500}
     - targetCorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       insertIndex: -1
@@ -235,6 +236,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8092463592087260711}
+    - targetCorrespondingSourceObject: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2986545486488125826}
   m_SourcePrefab: {fileID: 100100000, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
 --- !u!1 &2213695205824315632 stripped
 GameObject:
@@ -275,19 +279,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &4970527418725496204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2213695205824315632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df149d1f6e93d364db79a2401f3ae1c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateMachine: {fileID: 11400000, guid: ad7fe1347bfdf4427a906a09e5ef0b72, type: 2}
 --- !u!114 &4334815632398703500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,3 +376,16 @@ MonoBehaviour:
   maxMana: 10
   regenRate: 0.1
   currentMana: 0
+--- !u!114 &2986545486488125826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213695205824315632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df149d1f6e93d364db79a2401f3ae1c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateMachine: {fileID: 11400000, guid: ad7fe1347bfdf4427a906a09e5ef0b72, type: 2}

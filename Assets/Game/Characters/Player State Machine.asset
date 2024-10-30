@@ -64,27 +64,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
   title: Locomotion State
-  position: {x: 421, y: 53}
+  position: {x: 411, y: 43}
   transitions:
   - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
     trueStateID: 9f634198-6c68-4a27-b854-649f63279193
     condition:
       and:
       - or:
-        - predicate: Input Action Pressed
+        - predicate: Input Action Hold
           parameters:
           - Jump
           negate: 0
       - or:
         - predicate: Is Grounded
-          parameters: []
-          negate: 0
-  - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
-    trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
-    condition:
-      and:
-      - or:
-        - predicate: Edge Hit
           parameters: []
           negate: 0
   onEnterActions:
@@ -107,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 9f634198-6c68-4a27-b854-649f63279193
   title: Jump State
-  position: {x: 508, y: -70.32001}
+  position: {x: 533, y: -55.72}
   transitions:
   - rootStateID: 9f634198-6c68-4a27-b854-649f63279193
     trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
@@ -196,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
   title: Fall State
-  position: {x: 689, y: 33.679993}
+  position: {x: 717, y: 53}
   transitions:
   - rootStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
@@ -226,5 +218,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: bcd51f00-2dd7-4911-b1b0-b23a7f0bf0a3
   title: Any
-  position: {x: 544.00006, y: 270.11603}
+  position: {x: 511, y: 122.32001}
   transitions: []

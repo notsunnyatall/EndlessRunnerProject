@@ -1,20 +1,21 @@
 using System.Collections.Generic;
+using EndlessRunner.Inventories;
 using UnityEngine;
 
-namespace EndlessRunner.Core
+namespace EndlessRunner.Abilities
 {
     public class CooldownStore : MonoBehaviour
     {
-        Dictionary<object, float> cooldownTimers = new();
-        Dictionary<object, float> initialCooldownTimers = new();
+        Dictionary<InventoryItem, float> cooldownTimers = new();
+        Dictionary<InventoryItem, float> initialCooldownTimers = new();
 
-        public void StartCooldown(object target, float cooldownTime)
+        public void StartCooldown(InventoryItem target, float cooldownTime)
         {
             cooldownTimers[target] = cooldownTime;
             initialCooldownTimers[target] = cooldownTime;
         }
 
-        public float GetTimeRemaining(object target)
+        public float GetTimeRemaining(InventoryItem target)
         {
             if(cooldownTimers.ContainsKey(target))
             {
@@ -24,7 +25,7 @@ namespace EndlessRunner.Core
             return 0;
         }
 
-        public float GetFractionRemaining(object target)
+        public float GetFractionRemaining(InventoryItem target)
         {
             if(cooldownTimers.ContainsKey(target))
             {
@@ -36,7 +37,7 @@ namespace EndlessRunner.Core
 
         void Update()
         {
-            var keys = new List<object>(cooldownTimers.Keys);
+            var keys = new List<InventoryItem>(cooldownTimers.Keys);
 
             foreach(var key in keys)
             {
