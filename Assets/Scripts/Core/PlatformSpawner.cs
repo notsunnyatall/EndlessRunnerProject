@@ -4,21 +4,21 @@ namespace EndlessRunner.Core
 {
     public class PlatformSpawner : MonoBehaviour
     {
-        [SerializeField] PlatformConfig initialPlatform;
+        [SerializeField] PlatformConfig initialPlatformConfig;
         [SerializeField] PlatformConfig[] platformSequence;
         PlatformConfig currentConfig;
-        GameObject currentPlatform;
+        Platform currentPlatform;
         
         [System.Serializable]
         struct PlatformConfig
         {
-            public GameObject platform;
+            public Platform platform;
             public float spawnDistance;
         }
 
         void Start()
         {
-            currentConfig = initialPlatform;
+            currentConfig = initialPlatformConfig;
             currentPlatform = currentConfig.platform;
         }
 

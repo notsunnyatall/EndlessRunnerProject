@@ -839,8 +839,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: initialPlatformConfig.platform
+      value: 
+      objectReference: {fileID: 2062714316}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: initialSpawn.nextSpawnDistance
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: initialPlatformConfig.spawnDistance
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: obstaclesConfig.Array.data[0].delay
@@ -873,11 +881,11 @@ PrefabInstance:
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[0].platform
       value: 
-      objectReference: {fileID: 5051333403698996474, guid: 8a7e91f5c8c8af543a9a743fe030f95e, type: 3}
+      objectReference: {fileID: 7879463257874861264, guid: 8a7e91f5c8c8af543a9a743fe030f95e, type: 3}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[1].platform
       value: 
-      objectReference: {fileID: 5051333403698996474, guid: 55dd95764a1074c22ab0b3be6860d4a1, type: 3}
+      objectReference: {fileID: 7879463257874861264, guid: 55dd95764a1074c22ab0b3be6860d4a1, type: 3}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: obstaclesConfig.Array.data[0].objectToSpawn
       value: 
@@ -1246,6 +1254,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 89814323385789877, guid: 39a6f67d6c4cf364eb429e6504875eb4, type: 3}
   m_PrefabInstance: {fileID: 1308631968}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2062714316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7236705903989373202, guid: 39a6f67d6c4cf364eb429e6504875eb4, type: 3}
+  m_PrefabInstance: {fileID: 1308631968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062714313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b98e9c68730e440d9682722507bb87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2065851878
 PrefabInstance:
   m_ObjectHideFlags: 0

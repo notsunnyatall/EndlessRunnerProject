@@ -1,5 +1,7 @@
 using System;
+using EndlessRunner.Attributes;
 using EndlessRunner.Control;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +13,7 @@ namespace EndlessRunner.Abilities
         InputReader inputReader;
         int currentAbilityIndex = 0;
         public event Action storeUpdated;
+        Health health;
 
         public Ability GetCurrentAbility()
         {
@@ -20,6 +23,7 @@ namespace EndlessRunner.Abilities
         void Awake()
         {
             inputReader = GetComponent<InputReader>();
+            health = GetComponent<Health>();
         }
 
         void Start()
@@ -30,11 +34,21 @@ namespace EndlessRunner.Abilities
 
         void UseAbility(InputAction.CallbackContext context)
         {   
-            GetCurrentAbility().Use(gameObject);
+            if(health.IsDead())
+            {
+                return;
+            }
+
+            GetCurrentAbility().Use(gameObject); 
         }
 
         void ScrollAbility(InputAction.CallbackContext context)
         {
+            if(health.IsDead())
+            {
+                return;
+            }
+
             if(currentAbilityIndex == abilities.Length - 1)
             {
                 currentAbilityIndex = 0;

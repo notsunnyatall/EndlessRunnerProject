@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2832824941129862060}
-  - component: {fileID: 2097879179992839554}
+  - component: {fileID: 4756596485474049803}
   m_Layer: 0
   m_Name: Base Platform Set
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2097879179992839554
+--- !u!114 &4756596485474049803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,12 +41,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7584723331058366241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 478a342573977474ab7a7fd7273781aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b98e9c68730e440d9682722507bb87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: 2
-  direction: {x: -1, y: 0}
-  effectPoints: 0
-  speed: 0
-  destroyAfterHit: 0
-  useGameSpeed: 1

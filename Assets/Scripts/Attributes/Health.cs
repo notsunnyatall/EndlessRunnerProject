@@ -47,6 +47,11 @@ namespace EndlessRunner.Attributes
             }
         }
 
+        public bool IsDead()
+        {
+            return currentHealthPoints <= 0;
+        }
+
         public void Kill()
         {
             TakeDamage(currentHealthPoints);
@@ -55,11 +60,6 @@ namespace EndlessRunner.Attributes
         void Awake()
         {
             currentHealthPoints = maxHealthPoints;
-        }
-
-        bool IsDead()
-        {
-            return currentHealthPoints <= 0;
         }
 
         bool HasFullHealth()
