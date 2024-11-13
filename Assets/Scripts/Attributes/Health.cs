@@ -21,6 +21,11 @@ namespace EndlessRunner.Attributes
             return currentHealthPoints;
         }
 
+        public bool IsDead()
+        {
+            return currentHealthPoints <= 0;
+        }
+
         public void TakeDamage(int damagePoints)
         {
             if(!IsDead())
@@ -45,16 +50,6 @@ namespace EndlessRunner.Attributes
                 currentHealthPoints = Mathf.Min(maxHealthPoints, currentHealthPoints + healPoints);
                 onHeal?.Invoke();
             }
-        }
-
-        public bool IsDead()
-        {
-            return currentHealthPoints <= 0;
-        }
-
-        public void Kill()
-        {
-            TakeDamage(currentHealthPoints);
         }
 
         void Awake()

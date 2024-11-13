@@ -3,13 +3,15 @@ using UnityEngine;
 
 namespace EndlessRunner.Combat
 {
-    public class Killer : MonoBehaviour
-    {
+    public class Damager : MonoBehaviour
+    {   
+        [SerializeField] int damagePoints = 1;
+
         void OnTriggerEnter(Collider other)
         {
             if(other.TryGetComponent(out Health health))
             {
-                health.Kill();
+                health.TakeDamage(damagePoints);
             }
         }
     }

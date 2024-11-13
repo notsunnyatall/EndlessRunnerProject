@@ -23,11 +23,6 @@ namespace EndlessRunner.Combat
             transform.Translate(direction * speed * Time.deltaTime);
         }
 
-        void OnBecameInvisible()
-        {
-            Destroy(gameObject);
-        }
-
         void OnTriggerEnter(Collider other)
         {
             if(other.gameObject != user)

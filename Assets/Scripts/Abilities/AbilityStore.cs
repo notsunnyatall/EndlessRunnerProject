@@ -1,7 +1,6 @@
 using System;
 using EndlessRunner.Attributes;
 using EndlessRunner.Control;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

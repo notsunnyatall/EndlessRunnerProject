@@ -15,10 +15,5 @@ namespace EndlessRunner.Core
         {
             transform.Translate(Vector2.left * gameSettings.GetGameSpeed() * Time.deltaTime);
         }
-
-        void OnBecameInvisible()
-        {
-            Destroy(gameObject);
-        }
     }
 }
