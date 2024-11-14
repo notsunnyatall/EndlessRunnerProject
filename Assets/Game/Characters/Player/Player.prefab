@@ -264,7 +264,7 @@ MonoBehaviour:
   jumpForce: 8
   jumpTime: 0.35
   gravityMultiplier: 3.2
-  edgeHitDuration: 0.5
+  edgeHitDuration: 0.4
 --- !u!114 &5129372429664671559
 MonoBehaviour:
   m_ObjectHideFlags: 0

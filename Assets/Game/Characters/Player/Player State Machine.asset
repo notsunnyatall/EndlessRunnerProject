@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
   title: Locomotion State
-  position: {x: 411, y: 43}
+  position: {x: 411, y: 51}
   transitions:
   - rootStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
     trueStateID: 9f634198-6c68-4a27-b854-649f63279193
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 9f634198-6c68-4a27-b854-649f63279193
   title: Jump State
-  position: {x: 533, y: -55.72}
+  position: {x: 541, y: -47.5}
   transitions:
   - rootStateID: 9f634198-6c68-4a27-b854-649f63279193
     trueStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
   title: Fall State
-  position: {x: 717, y: 53}
+  position: {x: 729, y: 53}
   transitions:
   - rootStateID: 4ae09815-ed64-4e6c-80f4-c386851a55b6
     trueStateID: 3c091c07-e865-48e9-9d70-8ae6c3fdeee7
