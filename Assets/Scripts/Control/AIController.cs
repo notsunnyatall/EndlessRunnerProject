@@ -5,7 +5,9 @@ namespace EndlessRunner.Control
 {
     public class AIController : MonoBehaviour
     {
+        [SerializeField] float abilityStartTime = 5;
         AbilityStore abilityStore;
+        float currentTime;
 
         void Awake()
         {
@@ -14,7 +16,9 @@ namespace EndlessRunner.Control
 
         void Update()
         {
-            if(!abilityStore.UseAbility())
+            currentTime += Time.deltaTime;
+
+            if(currentTime >= abilityStartTime && !abilityStore.UseAbility())
             {
                 abilityStore.ScrollAbility();
             }

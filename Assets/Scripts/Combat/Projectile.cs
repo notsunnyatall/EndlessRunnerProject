@@ -27,8 +27,6 @@ namespace EndlessRunner.Combat
         {
             if(other.gameObject != user)
             {
-
-                            print("Trigger enter");
                 if(other.TryGetComponent(out Health health))
                 {
                     health.TakeDamage(damage);
