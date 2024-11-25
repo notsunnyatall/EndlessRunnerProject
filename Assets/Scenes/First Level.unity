@@ -813,6 +813,10 @@ PrefabInstance:
       propertyPath: abilitiesConfig.Array.data[1].ability
       value: 
       objectReference: {fileID: 11400000, guid: bdb7f85c68ca646e3b4992aed1d32a5f, type: 2}
+    - target: {fileID: 5395505673508450676, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6470861768112260203, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -889,6 +893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6898005278459423610, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7525607356224825864, guid: a9056230ea73b47d5bbe9b16d2980a64, type: 3}
       propertyPath: m_Name
       value: Player
@@ -917,7 +925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4156545351453188605, guid: 8eb4bea642c792542848d7dd5727db8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.63
       objectReference: {fileID: 0}
     - target: {fileID: 4156545351453188605, guid: 8eb4bea642c792542848d7dd5727db8c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1132,6 +1140,10 @@ PrefabInstance:
     - target: {fileID: 4516095422201602806, guid: 4e631aa8fbb31d243a3a93d7d00231bd, type: 3}
       propertyPath: m_Name
       value: Parallax Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383263237873638374, guid: 4e631aa8fbb31d243a3a93d7d00231bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5396913526549378544, guid: 4e631aa8fbb31d243a3a93d7d00231bd, type: 3}
       propertyPath: m_LocalPosition.x

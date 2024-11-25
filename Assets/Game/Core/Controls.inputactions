@@ -11,7 +11,7 @@
                     "id": "257638b6-6c94-48fa-afd1-3a9b699920d1",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "PressAndRepeat(holdTime=0.05,repeatTime=0.05,press=true)",
                     "initialStateCheck": false
                 },
                 {

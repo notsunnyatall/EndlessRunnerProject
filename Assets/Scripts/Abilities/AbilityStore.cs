@@ -1,6 +1,5 @@
 using System;
 using EndlessRunner.Attributes;
-using EndlessRunner.Control;
 using UnityEngine;
 
 namespace EndlessRunner.Abilities
@@ -9,9 +8,8 @@ namespace EndlessRunner.Abilities
     {
         [SerializeField] AbilityConfig[] abilitiesConfig;
         [SerializeField] bool useHealthConditions = false;
-        InputReader inputReader;
-        int currentAbilityIndex = 0;
         Health health;
+        int currentAbilityIndex = 0;
         public event Action storeUpdated;
 
         [Serializable]
@@ -74,17 +72,7 @@ namespace EndlessRunner.Abilities
 
         void Awake()
         {
-            inputReader = GetComponent<InputReader>();
             health = GetComponent<Health>();
-        }
-
-        void Start()
-        {
-            if(inputReader != null)
-            {
-                inputReader.GetInputAction("Use Ability").performed += a => UseAbility();
-                inputReader.GetInputAction("Scroll Ability").performed += a => ScrollAbility();
-            }
         }
     }
 }
