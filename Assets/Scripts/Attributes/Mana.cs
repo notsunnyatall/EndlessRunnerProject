@@ -6,7 +6,7 @@ namespace EndlessRunner.Attributes
     {
         [SerializeField] float maxMana = 10;
         [SerializeField] float regenRate = 0.1f;
-        [SerializeField] float currentMana;
+        float currentMana;
 
         public float GetManaFraction()
         {

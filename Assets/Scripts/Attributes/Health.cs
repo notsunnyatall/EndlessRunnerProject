@@ -21,6 +21,11 @@ namespace EndlessRunner.Attributes
             return currentHealthPoints;
         }
 
+        public float GetHealthFraction()
+        {
+            return (float)currentHealthPoints / maxHealthPoints;
+        }
+
         public bool IsDead()
         {
             return currentHealthPoints <= 0;

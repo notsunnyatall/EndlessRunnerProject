@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b3daf58d2c849b292ab1e5a56b7457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 2
+  maxHealthPoints: 3
   onDie:
     m_PersistentCalls:
       m_Calls:
@@ -318,9 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a205b09d973284087a30168299ec5f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilities:
-  - {fileID: 11400000, guid: 38ce4e4223b39493f8dc6ff7d834078e, type: 2}
-  - {fileID: 11400000, guid: bdb7f85c68ca646e3b4992aed1d32a5f, type: 2}
+  abilitiesConfig: []
 --- !u!114 &6706936082778433806
 MonoBehaviour:
   m_ObjectHideFlags: 0

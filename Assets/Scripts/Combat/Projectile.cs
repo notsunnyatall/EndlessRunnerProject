@@ -9,7 +9,7 @@ namespace EndlessRunner.Combat
         [SerializeField] float speed = 5;
         [SerializeField] int hits = 3;
         GameObject user;
-        Vector2 direction = Vector2.left;
+        Vector2 direction;
         int currentHits = 0;
 
         public void SetData(GameObject user, Vector2 direction)

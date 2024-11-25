@@ -6,6 +6,7 @@ namespace EndlessRunner.Abilities
     {
         GameObject user;
         GameObject target;
+        Vector3 targetPoint;
 
         public AbilityData(GameObject user)
         {
@@ -22,9 +23,19 @@ namespace EndlessRunner.Abilities
             return target;
         }
 
+        public Vector3 GetTargetPoint()
+        {
+            return targetPoint;
+        }
+
         public void SetTarget(GameObject target)
         {
             this.target = target;
+        }
+
+        public void SetTargetPoint(Vector3 targetPoint)
+        {
+            this.targetPoint = targetPoint;
         }
     }
 }

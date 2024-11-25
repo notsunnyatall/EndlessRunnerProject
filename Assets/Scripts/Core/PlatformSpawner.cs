@@ -8,9 +8,9 @@ namespace EndlessRunner.Core
     {
         [SerializeField] PlatformConfig initialPlatformConfig;
         [SerializeField] PlatformConfig[] platformSequence;
-        GameSettings gameSettings;
         PlatformConfig currentConfig;
         Platform currentPlatform;
+        float currentTime;
   
         [System.Serializable]
         struct PlatformConfig
@@ -21,11 +21,6 @@ namespace EndlessRunner.Core
             public float maxSpawnTime;
         }
 
-        void Awake()
-        {
-            gameSettings = FindObjectOfType<GameSettings>();
-        }
-
         void Start()
         {
             currentConfig = initialPlatformConfig;
@@ -34,6 +29,8 @@ namespace EndlessRunner.Core
 
         void Update()
         {
+            currentTime += Time.deltaTime;
+
             Vector3 platformPosition = currentPlatform.transform.position;
             float spawnDistance = currentConfig.spawnDistance;
             
@@ -54,7 +51,6 @@ namespace EndlessRunner.Core
         {
             foreach(var platformConfig in platformSequence)
             {
-                float currentTime = gameSettings.GetCurrentTime();
                 float minTime = platformConfig.minSpawnTime;
                 float maxTime = platformConfig.maxSpawnTime;
 

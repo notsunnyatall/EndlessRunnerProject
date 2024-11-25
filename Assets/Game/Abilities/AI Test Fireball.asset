@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db1be0c63f7ca4df9bf1804e22d7d63d, type: 3}
-  m_Name: Fireball
+  m_Name: AI Test Fireball
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: a3ec9321daf797b4ca56c16c94303aa5, type: 3}
-  targeting: {fileID: 11400000, guid: a33ea26bd85bdcf44af49a2ad1b2e418, type: 2}
+  icon: {fileID: 0}
+  targeting: {fileID: 11400000, guid: 04bbabd87d397c541a6237b77c807ff2, type: 2}
   effects:
   - {fileID: 11400000, guid: 3be976de003994f8c9020f19441996c9, type: 2}
-  cooldownTime: 10
-  manaCost: 5
+  cooldownTime: 5
+  manaCost: 0

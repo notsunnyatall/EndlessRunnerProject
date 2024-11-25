@@ -1,5 +1,4 @@
 using EndlessRunner.Attributes;
-using EndlessRunner.Core;
 using EndlessRunner.Inventories;
 using UnityEngine;
 

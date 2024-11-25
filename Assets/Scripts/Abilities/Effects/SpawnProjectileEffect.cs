@@ -12,10 +12,22 @@ namespace EndlessRunner.Abilities.Effects
         public override void StartEffect(AbilityData data, Action finished)
         {
             GameObject user = data.GetUser();
+            Vector2 startPosition = user.transform.position;
+            Vector2 direction;
 
-            Projectile projectileInstance = Instantiate(projectilePrefab, user.transform.position, Quaternion.identity);
+            if(data.GetTarget() != null)
+            {
+                Vector2 targetPosition = data.GetTarget().transform.position;
+                direction = (targetPosition - startPosition).normalized;
+            }
+            else
+            {
+                Vector2 targetPoint = data.GetTargetPoint();
+                direction = (targetPoint - startPosition).normalized;
+            }
 
-            projectileInstance.SetData(user, user.transform.right);
+            Projectile projectileInstance = Instantiate(projectilePrefab, startPosition, Quaternion.identity);
+            projectileInstance.SetData(user, direction);
 
             finished();
         }

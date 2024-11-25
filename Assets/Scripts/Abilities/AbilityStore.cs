@@ -2,21 +2,74 @@ using System;
 using EndlessRunner.Attributes;
 using EndlessRunner.Control;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace EndlessRunner.Abilities
 {
     public class AbilityStore : MonoBehaviour
     {
-        [SerializeField] Ability[] abilities;
+        [SerializeField] AbilityConfig[] abilitiesConfig;
+        [SerializeField] bool useHealthConditions = false;
         InputReader inputReader;
         int currentAbilityIndex = 0;
-        public event Action storeUpdated;
         Health health;
+        public event Action storeUpdated;
+
+        [Serializable]
+        struct AbilityConfig
+        {
+            [Range(0,1)] public float minHealthPercentage;
+            [Range(0,1)] public float maxHealthPercentage;
+            public Ability ability;
+        }
 
         public Ability GetCurrentAbility()
         {
-            return abilities[currentAbilityIndex];
+            return abilitiesConfig[currentAbilityIndex].ability;
+        }
+
+        public bool UseAbility()
+        {   
+            if(health.IsDead())
+            {
+                return false;
+            }
+
+            if(useHealthConditions)
+            {
+                float minHealth = abilitiesConfig[currentAbilityIndex].minHealthPercentage;
+                float maxHealth = abilitiesConfig[currentAbilityIndex].maxHealthPercentage;
+
+                if(health.GetHealthFraction() < minHealth)
+                {
+                    return false;
+                }
+
+                if(health.GetHealthFraction() > maxHealth)
+                {
+                    return false;
+                }
+            }
+
+            return GetCurrentAbility().Use(gameObject); 
+        }
+
+        public void ScrollAbility()
+        {
+            if(health.IsDead())
+            {
+                return;
+            }
+
+            if(currentAbilityIndex == abilitiesConfig.Length - 1)
+            {
+                currentAbilityIndex = 0;
+            }
+            else
+            {
+                currentAbilityIndex++;
+            }
+
+            storeUpdated?.Invoke();
         }
 
         void Awake()
@@ -27,37 +80,11 @@ namespace EndlessRunner.Abilities
 
         void Start()
         {
-            inputReader.GetInputAction("Use Ability").performed += UseAbility;
-            inputReader.GetInputAction("Scroll Ability").performed += ScrollAbility;
-        }
-
-        void UseAbility(InputAction.CallbackContext context)
-        {   
-            if(health.IsDead())
+            if(inputReader != null)
             {
-                return;
+                inputReader.GetInputAction("Use Ability").performed += a => UseAbility();
+                inputReader.GetInputAction("Scroll Ability").performed += a => ScrollAbility();
             }
-
-            GetCurrentAbility().Use(gameObject); 
-        }
-
-        void ScrollAbility(InputAction.CallbackContext context)
-        {
-            if(health.IsDead())
-            {
-                return;
-            }
-
-            if(currentAbilityIndex == abilities.Length - 1)
-            {
-                currentAbilityIndex = 0;
-            }
-            else
-            {
-                currentAbilityIndex++;
-            }
-
-            storeUpdated?.Invoke();
         }
     }
 }
