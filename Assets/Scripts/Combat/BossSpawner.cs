@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace EndlessRunner.Combat
 {
-    public class BossSpawner : MonoBehaviour
+    public class BossActivator : MonoBehaviour
     {
-        [SerializeField] GameObject bossPrefab;
-        [SerializeField] float timeToSpawn;
+        [SerializeField] GameObject boss;
+        [SerializeField] float timeToActivate;
 
         void Start()
         {
@@ -15,9 +15,11 @@ namespace EndlessRunner.Combat
 
         IEnumerator SpawnRoutine()
         {
-            yield return new WaitForSeconds(timeToSpawn);
+            boss.SetActive(false);
 
-            Instantiate(bossPrefab, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(timeToActivate);
+
+            boss.SetActive(true);
         }
     }
 }

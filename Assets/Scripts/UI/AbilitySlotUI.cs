@@ -23,6 +23,7 @@ namespace EndlessRunner.UI
         void Start()
         {
             abilityStore.storeUpdated += Refresh;
+            Refresh();
         }
 
         void Update()
