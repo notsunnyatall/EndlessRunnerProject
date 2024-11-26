@@ -6,7 +6,7 @@ namespace EndlessRunner.Core
     {
         GameSettings gameSettings;
 
-        void Awake()
+        void Start()
         {
             gameSettings = FindObjectOfType<GameSettings>();
         }

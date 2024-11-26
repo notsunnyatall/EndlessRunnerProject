@@ -11,8 +11,12 @@ namespace EndlessRunner.UI
 
         void Awake()
         {
-            scorer = FindObjectOfType<Scorer>();
             scoreText = GetComponent<TMP_Text>();
+        }
+
+        void Start()
+        {
+            scorer = FindObjectOfType<Scorer>();
         }
 
         void Update()

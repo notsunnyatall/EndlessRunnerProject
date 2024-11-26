@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d5dac60b9151d419c3ec1398f757da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedScenes: 00000000

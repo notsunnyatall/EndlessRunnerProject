@@ -16,11 +16,14 @@ namespace EndlessRunner.Combat
         {
             this.user = user;
             this.direction = direction;
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
 
         void Update()
         {
-            transform.Translate(direction * speed * Time.deltaTime);
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
 
         void OnTriggerEnter(Collider other)

@@ -14,7 +14,7 @@ namespace EndlessRunner.Core
             public float speedMultiplier;
         }
 
-        void Awake()
+        void Start()
         {
             settings = FindObjectOfType<GameSettings>();
         }
