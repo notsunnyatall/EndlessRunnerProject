@@ -227,6 +227,18 @@ PrefabInstance:
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: EndlessRunner.SceneManagement.Portal, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4199978182709635562, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.45351818
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199978182709635562, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4198113
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199978182709635562, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6709763738785079082, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.98
@@ -273,8 +285,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7132595547655402868, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8580965675533289126, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
+      propertyPath: abilitiesConfig.Array.data[0].ability
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b23e0f53d7115240b95a3b8e0159c24, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

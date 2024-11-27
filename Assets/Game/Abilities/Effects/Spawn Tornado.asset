@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44014ecfb7a2a40359737231c7f7a877, type: 3}
-  m_Name: Spawn AI Fireball
+  m_Name: Spawn Tornado
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 3010248639809333979, guid: 905eb7dc4f2144a72b29fe69e20e056d, type: 3}
+  projectilePrefab: {fileID: 2413507039963285697, guid: dd6f01cc14d00fc4d84f514c4a80180a, type: 3}

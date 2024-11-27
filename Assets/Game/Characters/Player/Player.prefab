@@ -300,8 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd82a7127b66437dbbf6f2306511a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMana: 10
-  regenRate: 0.1
+  maxMana: 20
+  regenRate: 0.5
 --- !u!114 &909487170258819491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b70a6ddd5abd84ca22d319a5c1d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 4
   jumpForce: 8
   maxJumpTime: 0.35
   gravityMultiplier: 3.2
   edgeHitDuration: 0.4
+  horizontalMovement: 0
