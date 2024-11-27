@@ -1,7 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEditor;
+
+#if UNITY_EDITOR
 using UnityEngine.InputSystem.Editor;
+#endif
 
 #if UNITY_EDITOR
 [InitializeOnLoad]

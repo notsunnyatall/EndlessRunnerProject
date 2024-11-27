@@ -132,6 +132,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6709763738785079082, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
   m_PrefabInstance: {fileID: 812974480}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &426321868 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5458285639145340613, guid: 4c9576e0665b3364ca2eb098b7161b0b, type: 3}
+  m_PrefabInstance: {fileID: 1254259622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &464778924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1020959219130060639, guid: 7bd804ffc7f33704c83e246d43a82b9d, type: 3}
@@ -222,6 +227,10 @@ PrefabInstance:
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: EndlessRunner.SceneManagement.Portal, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3579130407384369040, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c1af580d62d63948ab608897585e5ab, type: 3}
     - target: {fileID: 6709763738785079082, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.98
@@ -262,6 +271,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7038371124591658064, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
+      propertyPath: levelAudioSource
+      value: 
+      objectReference: {fileID: 426321868}
     - target: {fileID: 7132595547655402868, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
       propertyPath: m_Name
       value: Boss Tree
