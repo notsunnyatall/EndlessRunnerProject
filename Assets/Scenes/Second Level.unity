@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7132595547655402868, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8580965675533289126, guid: adc5cb965777ede4fa5ef5acdf8378a9, type: 3}
       propertyPath: abilitiesConfig.Array.data[0].ability
@@ -515,7 +515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: initialPlatformConfig.platform
@@ -532,25 +532,41 @@ PrefabInstance:
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[1].platform
       value: 
+      objectReference: {fileID: 5469953932558687517, guid: b7d3e2fcfd6ad0749afa5f352db72e89, type: 3}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[2].platform
+      value: 
       objectReference: {fileID: 5469953932558687517, guid: adc7bf7ce627e204b8207b9dff4e840d, type: 3}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[0].maxSpawnTime
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
-      propertyPath: platformSequence.Array.data[1].maxSpawnTime
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
-      propertyPath: platformSequence.Array.data[1].minSpawnTime
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
-      propertyPath: platformSequence.Array.data[0].spawnDistance
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[1].maxSpawnTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[1].minSpawnTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[2].maxSpawnTime
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[2].minSpawnTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[0].spawnDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[1].spawnDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[2].spawnDistance
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7297737609420308112, guid: 2d6111b773654429785148229340d890, type: 3}

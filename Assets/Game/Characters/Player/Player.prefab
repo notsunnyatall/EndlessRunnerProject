@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMana: 20
-  regenRate: 0.5
+  regenRate: 0.7
 --- !u!114 &909487170258819491
 MonoBehaviour:
   m_ObjectHideFlags: 0

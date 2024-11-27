@@ -393,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: initialPlatformConfig.platform
@@ -410,18 +410,54 @@ PrefabInstance:
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[1].platform
       value: 
+      objectReference: {fileID: 5469953932558687517, guid: 6a47f80bb526c374d808eaaa468b07dc, type: 3}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[2].platform
+      value: 
+      objectReference: {fileID: 5469953932558687517, guid: 8f1b87fce9d630945b8dc5b3149a4037, type: 3}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[3].platform
+      value: 
+      objectReference: {fileID: 5469953932558687517, guid: 5eefeecdc43b01b4cb43cca5e4e10479, type: 3}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[4].platform
+      value: 
       objectReference: {fileID: 5469953932558687517, guid: 37beca6c02ca4480ea6f581abbe90d7a, type: 3}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[0].maxSpawnTime
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[1].maxSpawnTime
-      value: Infinity
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[1].minSpawnTime
-      value: 10
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[2].maxSpawnTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[2].minSpawnTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[3].maxSpawnTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[3].minSpawnTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[4].maxSpawnTime
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[4].minSpawnTime
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[0].spawnDistance
@@ -429,6 +465,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[1].spawnDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[2].spawnDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[3].spawnDistance
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[4].spawnDistance
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7297737609420308112, guid: 2d6111b773654429785148229340d890, type: 3}
@@ -1036,7 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1560082462027914753, guid: 7bd804ffc7f33704c83e246d43a82b9d, type: 3}
       propertyPath: timeToActivate
-      value: 15
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 9050366205804385667, guid: 7bd804ffc7f33704c83e246d43a82b9d, type: 3}
       propertyPath: m_Name
