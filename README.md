@@ -13,6 +13,8 @@
 Onirics es un emocionante videojuego endless runner con toques de plataformas, ambientado en un fascinante mundo de fantasía medieval postapocalíptico. En esta épica aventura, asumirás el papel de un legendario héroe destinado a enfrentarse a los temibles demonios que han sumido al mundo en la oscuridad. Domina el arte del movimiento ágil y despliega ingeniosas estrategias al combinar habilidades únicas para superar desafíos, derrotar enemigos y demostrar tu destreza. Sumérgete en esta historia cargada de acción, donde cada decisión puede marcar la diferencia entre la victoria y la caída. ¡La salvación del mundo está en tus manos!
 ## Documentación:
 [Game Design Document](https://docs.google.com/document/d/1_jeumNhiDDIlDwldw26V9yBszaTCB5tIoWwKTS6C_E4/edit)
+
+[Documentación del código](https://github.com/notsunnyatall/EndlessRunnerProject/blob/main/Assets/Scripts/ScriptingAPI.md)
 ## Gameplay:
 ![alt text](image.png)
 ![alt text](image-1.png)
