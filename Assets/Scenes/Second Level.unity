@@ -515,7 +515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: initialPlatformConfig.platform
@@ -536,6 +536,10 @@ PrefabInstance:
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[2].platform
       value: 
+      objectReference: {fileID: 5469953932558687517, guid: 25d1429b79e74c546a14050968c6ca45, type: 3}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[3].platform
+      value: 
       objectReference: {fileID: 5469953932558687517, guid: adc7bf7ce627e204b8207b9dff4e840d, type: 3}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[0].maxSpawnTime
@@ -551,22 +555,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[2].maxSpawnTime
-      value: Infinity
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[2].minSpawnTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[3].maxSpawnTime
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[3].minSpawnTime
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[0].spawnDistance
-      value: 20
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[1].spawnDistance
-      value: 20
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
       propertyPath: platformSequence.Array.data[2].spawnDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371224443735241695, guid: 2d6111b773654429785148229340d890, type: 3}
+      propertyPath: platformSequence.Array.data[3].spawnDistance
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7297737609420308112, guid: 2d6111b773654429785148229340d890, type: 3}
@@ -1170,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1560082462027914753, guid: 7bd804ffc7f33704c83e246d43a82b9d, type: 3}
       propertyPath: timeToActivate
-      value: 15
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 9050366205804385667, guid: 7bd804ffc7f33704c83e246d43a82b9d, type: 3}
       propertyPath: m_Name

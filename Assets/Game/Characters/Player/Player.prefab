@@ -318,5 +318,5 @@ MonoBehaviour:
   jumpForce: 8
   maxJumpTime: 0.35
   gravityMultiplier: 3.2
-  edgeHitDuration: 0.4
+  edgeHitDuration: 0.35
   horizontalMovement: 0

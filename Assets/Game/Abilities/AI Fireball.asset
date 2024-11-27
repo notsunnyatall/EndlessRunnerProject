@@ -16,5 +16,5 @@ MonoBehaviour:
   targeting: {fileID: 11400000, guid: 04bbabd87d397c541a6237b77c807ff2, type: 2}
   effects:
   - {fileID: 11400000, guid: 3be976de003994f8c9020f19441996c9, type: 2}
-  cooldownTime: 0.5
+  cooldownTime: 0.7
   manaCost: 0
