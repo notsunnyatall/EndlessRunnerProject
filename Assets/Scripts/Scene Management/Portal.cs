@@ -1,4 +1,6 @@
 using System.Collections;
+using EndlessRunner.Attributes;
+using EndlessRunner.Control;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,11 +19,21 @@ namespace EndlessRunner.SceneManagement
             StartCoroutine(LoadSceneRoutine());
         }
 
+        void OnTriggerEnter(Collider other)
+        {
+            if(other.CompareTag("Player"))
+            {
+                Teleport();
+            }
+        }
+
         IEnumerator LoadSceneRoutine()
         {
             DontDestroyOnLoad(gameObject);
 
             Fader fader = FindObjectOfType<Fader>();
+
+            UpdatePlayerSequence(false);
 
             yield return new WaitForSeconds(fadeDelay);
 
@@ -31,9 +43,28 @@ namespace EndlessRunner.SceneManagement
 
             yield return new WaitForSeconds(fadeWaitTime);
 
+            UpdatePlayerSequence(true);
+
             yield return fader.FadeIn(fadeInTime);
 
             Destroy(gameObject);
+        }
+
+        void UpdatePlayerSequence(bool state)
+        {
+            GameObject player = GameObject.FindWithTag("Player");
+            Health playerHealth = player.GetComponent<Health>();
+
+            player.GetComponent<PlayerController>().enabled = state;
+            
+            if(!state)
+            {
+                playerHealth.SaveState();
+            }
+            else
+            {
+                playerHealth.LoadState();
+            }
         }
     }
 }

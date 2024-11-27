@@ -10,6 +10,7 @@ namespace EndlessRunner.Attributes
         public UnityEvent onDamageTaken;
         public UnityEvent onHeal;
         int currentHealthPoints = 0;
+        const string saveKey = "currentHealth";
 
         public int GetMaxHealthPoints()
         {
@@ -29,6 +30,25 @@ namespace EndlessRunner.Attributes
         public bool IsDead()
         {
             return currentHealthPoints <= 0;
+        }
+
+        public void SaveState()
+        {
+            PlayerPrefs.SetInt(name + saveKey, currentHealthPoints);
+            PlayerPrefs.Save();
+        }
+
+        public void LoadState()
+        {
+            if(PlayerPrefs.HasKey(name + saveKey))
+            {
+                currentHealthPoints = PlayerPrefs.GetInt(name + saveKey);
+                Heal(0);
+            }
+            else
+            {
+                currentHealthPoints = maxHealthPoints;
+            }
         }
 
         public void TakeDamage(int damagePoints)

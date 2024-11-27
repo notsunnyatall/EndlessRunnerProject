@@ -9,13 +9,11 @@ namespace EndlessRunner.Combat
         [SerializeField] float speed = 5;
         [SerializeField] int hits = 3;
         GameObject user;
-        Vector2 direction;
         int currentHits = 0;
 
         public void SetData(GameObject user, Vector2 direction)
         {
             this.user = user;
-            this.direction = direction;
 
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -32,6 +30,11 @@ namespace EndlessRunner.Combat
             {
                 if(other.TryGetComponent(out Health health))
                 {
+                    if(user.GetComponent<Health>().IsDead())
+                    {
+                        return;
+                    }
+
                     health.TakeDamage(damage);
 
                     currentHits++;
