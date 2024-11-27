@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/First Level.unity
     guid: e90569e8e64c2814c8c5c8c7d51159b8
   - enabled: 1
-    path: Assets/Scenes/Shop Lobby.unity
+    path: Assets/Scenes/Heal Lobby.unity
     guid: 499710a254fd05940a153a97624e7c50
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 750c6b05d979c824ca34d932526d20e6, type: 2}
