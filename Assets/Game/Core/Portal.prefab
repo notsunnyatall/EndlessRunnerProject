@@ -47,9 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: 0
   fadeDelay: 3
-  fadeOutTime: 2
-  fadeInTime: 2
+  fadeOutTime: 1
+  fadeInTime: 0.5
   fadeWaitTime: 1
+  removePlayerState: 0
 --- !u!65 &4167683284756700095
 BoxCollider:
   m_ObjectHideFlags: 0

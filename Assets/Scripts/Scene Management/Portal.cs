@@ -13,10 +13,16 @@ namespace EndlessRunner.SceneManagement
         [SerializeField] float fadeOutTime = 2;
         [SerializeField] float fadeInTime = 2;
         [SerializeField] float fadeWaitTime = 1;
+        [SerializeField] bool removePlayerState = false;
+
+        public void Teleport(int sceneIndex)
+        {
+            StartCoroutine(LoadSceneRoutine(sceneIndex));
+        }
 
         public void Teleport()
         {
-            StartCoroutine(LoadSceneRoutine());
+            Teleport(sceneToLoad);
         }
 
         void OnTriggerEnter(Collider other)
@@ -27,7 +33,7 @@ namespace EndlessRunner.SceneManagement
             }
         }
 
-        IEnumerator LoadSceneRoutine()
+        IEnumerator LoadSceneRoutine(int sceneIndex)
         {
             DontDestroyOnLoad(gameObject);
 
@@ -39,7 +45,7 @@ namespace EndlessRunner.SceneManagement
 
             yield return fader.FadeOut(fadeOutTime);
 
-            yield return SceneManager.LoadSceneAsync(sceneToLoad);
+            yield return SceneManager.LoadSceneAsync(sceneIndex);
 
             yield return new WaitForSeconds(fadeWaitTime);
 
@@ -53,9 +59,16 @@ namespace EndlessRunner.SceneManagement
         void UpdatePlayerSequence(bool state)
         {
             GameObject player = GameObject.FindWithTag("Player");
+            
             Health playerHealth = player.GetComponent<Health>();
+            PlayerController controller = player.GetComponent<PlayerController>();
 
-            player.GetComponent<PlayerController>().enabled = state;
+            controller.ToggleInput(state);
+
+            if(removePlayerState)
+            {
+                playerHealth.RemoveState();
+            }
             
             if(!state)
             {

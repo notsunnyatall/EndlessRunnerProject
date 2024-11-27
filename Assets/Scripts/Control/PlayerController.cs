@@ -17,10 +17,14 @@ namespace EndlessRunner.Control
         AbilityStore abilityStore;
         CharacterController controller;
         Animator animator;
-        SpriteRenderer spriteRenderer;
         float verticalVelocity;
         float timeSinceJumped = Mathf.Infinity;
         bool edgeHit;
+
+        public void ToggleInput(bool state)
+        {
+            playerInput.enabled = state;
+        }
 
         void Awake()
         {
@@ -28,7 +32,6 @@ namespace EndlessRunner.Control
             abilityStore = GetComponent<AbilityStore>();
             controller = GetComponent<CharacterController>();
             animator = GetComponent<Animator>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         void Update()

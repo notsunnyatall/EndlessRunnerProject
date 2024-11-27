@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84435de4b7d0b84ca6b44f263bc63c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityStartTime: 5
+  abilityStartTime: 3
 --- !u!114 &7821600348949692520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,5 +273,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89b2428ba9f88549ac3c1a1f9837207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 5
+  fadeTime: 3
   initialAlpha: 0

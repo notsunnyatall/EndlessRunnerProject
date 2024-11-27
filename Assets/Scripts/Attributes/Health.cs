@@ -51,6 +51,14 @@ namespace EndlessRunner.Attributes
             }
         }
 
+        public void RemoveState()
+        {
+            if(PlayerPrefs.HasKey(name + saveKey))
+            {
+                PlayerPrefs.DeleteKey(name + saveKey);
+            }
+        }
+
         public void TakeDamage(int damagePoints)
         {
             if(!IsDead())

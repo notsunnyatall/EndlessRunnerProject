@@ -8,6 +8,7 @@ namespace EndlessRunner.UI
     public class GameOverUI : MonoBehaviour
     {
         [SerializeField] Button restartButton;
+        [SerializeField] Button mainMenuButton;
         Scorer scorer;
 
         void OnEnable()
@@ -22,7 +23,8 @@ namespace EndlessRunner.UI
 
         void Awake()
         {
-            restartButton.onClick.AddListener(ReloadScene);
+            restartButton.onClick.AddListener(() => LoadScene(1));
+            mainMenuButton.onClick.AddListener(() => LoadScene(0));
         }
 
         void Start()
@@ -30,11 +32,10 @@ namespace EndlessRunner.UI
             scorer = FindObjectOfType<Scorer>();
         }
 
-        void ReloadScene()
+        void LoadScene(int sceneIndex)
         {
             scorer.ResetScore();
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }
