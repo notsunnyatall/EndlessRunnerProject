@@ -43,6 +43,10 @@ namespace EndlessRunner.Control
             {
                 HandleMovement();
             }
+            else
+            {
+                animator.SetFloat("movementSpeed", 1);
+            }
         }
 
         void OnEnable()
@@ -89,6 +93,8 @@ namespace EndlessRunner.Control
         {
             Vector2 movement = playerInput.actions["Movement"].ReadValue<Vector2>();
             movement.y = 0;
+
+            animator.SetFloat("movementSpeed", movement.x);
 
             if(movement != Vector2.zero)
             {

@@ -138,6 +138,18 @@ PrefabInstance:
       propertyPath: horizontalMovement
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3058783502503499532, guid: 97bcf35ba0401a4418bcad015b47291f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5428572
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058783502503499532, guid: 97bcf35ba0401a4418bcad015b47291f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5428572
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058783502503499532, guid: 97bcf35ba0401a4418bcad015b47291f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3215554282514404375, guid: 97bcf35ba0401a4418bcad015b47291f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
