@@ -1,4 +1,4 @@
-![Diseño sin título (1)](https://github.com/user-attachments/assets/85045a79-d1a7-483e-8fe9-cd6c6f899148)
+![Diseño sin título (2)](https://github.com/user-attachments/assets/4163070d-70cb-4cff-90f3-038b074277ad)
 ## Team:
  - Ortega Novoa Octavio
  - Alberto Nieto Cabrera
